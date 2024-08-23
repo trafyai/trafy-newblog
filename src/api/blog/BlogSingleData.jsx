@@ -1,10 +1,10 @@
-// import Twitter from '@public/assets/Images/comman/common/socials-black/twitter.png';
-// import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
-// import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
+import Twitter from '@/public/Images/socials/twitter.png';
+import Linkedin from '@/public/Images/socials/linkedin.png';
+import Facebook from '@/public/Images/socials/facebook.png';
 
-// import keyP from '@public/assets/Images/blog/5 key principles.png';
-// import immersive from '@public/assets/Images/blog/immersive ui design.png';
-// import digital from '@public/assets/Images/blog/digital dimension.png';
+import keyP from '@/public/Images/blog/5 key principles.png';
+import immersive from '@/public/Images/blog/immersive ui design.png';
+import digital from '@/public/Images/blog/digital dimension.png';
 
 
 
@@ -18,10 +18,10 @@ const BlogSingleData= [
     title: "5 Key Principles for Seamless User Experiences",
     author: "Suthersun",
     date: "April 04, 2024",
-    image: "",
-    twitter:"",
-    linkedin:"",
-    facebook:"",
+    image: keyP,
+    twitter:Twitter,
+    linkedin:Linkedin,
+    facebook:Facebook,
     description: [
       "In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services. Whether it's a website, a mobile app, or any digital platform, the way users interact with it can make or break its success. UI/UX design principles serve as the foundation for creating intuitive, engaging, and user-friendly experiences. Let's explore five fundamental principles that drive effective UI/UX design."
     ],
@@ -77,10 +77,10 @@ const BlogSingleData= [
     title: "5 Key Principles for Seamless User Experiences",
     author: "Suthersun",
     date: "April 04, 2024",
-    image: "",
-    twitter:"",
-    linkedin:"",
-    facebook:"",
+    image: keyP,
+    twitter:Twitter,
+    linkedin:Linkedin,
+    facebook:Facebook,
     description: [
       "In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services. Whether it's a website, a mobile app, or any digital platform, the way users interact with it can make or break its success. UI/UX design principles serve as the foundation for creating intuitive, engaging, and user-friendly experiences. Let's explore five fundamental principles that drive effective UI/UX design."
     ],
@@ -137,10 +137,10 @@ const BlogSingleData= [
     title: "The Essence of Immersive UI Design",
     author: "Suthersun",
     date: "April 04, 2024",
-    image: "",
-    twitter:"",
-    linkedin:"",
-    facebook:"",
+    image: immersive,
+    twitter:Twitter,
+    linkedin:Linkedin,
+    facebook:Facebook,
     description: [
           "In a world where digital experiences reign supreme, capturing and holding users' attention is the holy grail of design. Immersive UI (User Interface) design goes beyond mere functionality; it aims to create captivating experiences that draw users into a digital realm, leaving them feeling deeply engaged and connected. From virtual reality (VR) environments to interactive websites, immersive UI design has the power to transport users to new dimensions of interaction. Let's delve into the essence of immersive UI design and explore what sets it apart."
     ],
@@ -189,10 +189,10 @@ const BlogSingleData= [
     title: "Digital Dimensions and Exploring Spatial Design in UI/UX",
     author: "Suthersun",
     date: "April 04, 2024",
-    image: "",
-    twitter:"",
-    linkedin:"",
-    facebook:"",
+    image: digital,
+    twitter:Twitter,
+    linkedin:Linkedin,
+    facebook:Facebook,
     description: [
         "In the ever-evolving landscape of digital design, spatial design has emerged as a groundbreaking approach to creating immersive and intuitive user experiences. By leveraging principles of depth, perspective, and spatial relationships, spatial UI/UX design offers a new dimension of interaction that goes beyond traditional interfaces. From virtual reality (VR) environments to augmented reality (AR) applications, spatial design transforms digital spaces into dynamic and engaging worlds. Let's embark on a journey to uncover the essence of spatial design in UI/UX and its transformative impact on digital experiences."
     ],

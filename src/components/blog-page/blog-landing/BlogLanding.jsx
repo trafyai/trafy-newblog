@@ -11,7 +11,7 @@ export default function BlogLanding(){
             <div className="blog-landing-page">
                 <div className="blog-landing-container">
 
-                    {BlogSingleData.slice(0,1).map((item,index)=>
+                    {BlogSingleData.slice(0,1).map((item,index)=>(
                         <div className="blog-landing-banner">
                             <div className="blog-landing-banner-image">
                                 <Image src={item.image} alt={item.alt} />
@@ -26,6 +26,7 @@ export default function BlogLanding(){
                                 </div>
                             </div>
                         </div>
+                    )
                     )}
 
                     <div className="blog-landing-content">

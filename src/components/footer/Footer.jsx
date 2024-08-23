@@ -4,12 +4,12 @@ import React from "react";
 import Image from 'next/image';
 import '@/styles/footer/Footer.css'
 
-// import linkedin from '@public/assets/Images/comman/footer/linkedin (2).png';
-// import facebook from '@public/assets/Images/comman/footer/facebook.png';
-// import instagram from '@public/assets/Images/comman/footer/instagram (2).png';
-// import twitter from '@public/assets/Images/comman/footer/twitter (1).png';
-// import behance from '@public/assets/Images/comman/footer/behance.png';
-// import WhiteLogo from '@public/assets/Images/comman/header/whiteLogo.png';
+import linkedin from '@/public/Images/footer/linkedin (2).png';
+import facebook from '@/public/Images/footer/facebook.png';
+import instagram from '@/public/Images/footer/instagram (2).png';
+import twitter from '@/public/Images/footer/twitter (1).png';
+import behance from '@/public/Images/footer/behance.png';
+// import WhiteLogo from '@/public/Images/header/whiteLogo.png';
 import Link from "next/link";
 
 function Footer() {
@@ -70,8 +70,8 @@ function Footer() {
 
         <hr className="footer-line" />
 
-        {/* <div className="social-section">
-          <div className="footer-logo"><Image src={WhiteLogo} alt="trafy logo" width={77.612} height={32} /></div>
+        <div className="social-section">
+          {/* <div className="footer-logo"><Image src={WhiteLogo} alt="trafy logo" width={77.612} height={32} /></div> */}
           <div className="socials">
            <a href="https://www.linkedin.com/company/trafyai"><Image src={linkedin} alt="linkedin" /></a>
             <a href="https://www.facebook.com/trafyai"><Image src={facebook} alt="facebook" /></a>
@@ -79,7 +79,7 @@ function Footer() {
             <a href="https://twitter.com/trafyai"><Image src={twitter} alt="twitter" /></a>
             <a href="https://www.behance.net/trafy"><Image src={behance} alt="behance" /></a>
           </div>
-        </div> */}
+        </div>
 
         <div className="copyrights">
           <div className="copyright-text">© 2024 trafy. | <a href="">Commitments</a></div>

@@ -1,13 +1,13 @@
 // 'use client'
 // import React, { useRef, useState } from "react";
 // import '@styles/blog/BlogSingle.css';
-// import Twitter from '@public/assets/Images/comman/common/socials-black/twitter.png';
-// import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
-// import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
-// import Twitter_w from '@public/assets/Images/comman/common/socials-white/twitter-w.png';
-// import Linkedin_w from '@public/assets/Images/comman/common/socials-white/linkedin-w.png';
-// import Facebook_w from '@public/assets/Images/comman/common/socials-white/facebook-w.png';
-// import SS from '@public/assets/Images/blog/ss.jpeg';
+// import Twitter from '@public/Images/socials/twitter.png';
+// import Linkedin from '@public/Images/socials/linkedin.png';
+// import Facebook from '@public/Images/socials/facebook.png';
+// import Twitter_w from '@public/Images/socials-white/twitter-w.png';
+// import Linkedin_w from '@public/Images/socials-white/linkedin-w.png';
+// import Facebook_w from '@public/Images/socials-white/facebook-w.png';
+// import SS from '@public/Images/blog/ss.jpeg';
 // import BlogLandingData from "@api/blog/BlogLandingData";
 // import Link from "next/link";
 // import Image from "next/image";
@@ -289,9 +289,9 @@
 'use client'
 import React, { useRef, useState } from "react";
 import '@/styles/blog/BlogSingle.css';
-// import Twitter from '../../../../public/Images/socials/';
-// import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
-// import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
+import Twitter from '@/public/Images/socials/twitter.png';
+import Linkedin from '@/public/Images/socials/linkedin.png';
+import Facebook from '@/public/Images/socials/facebook.png';
 import BlogSingleData from "@/api/blog/BlogSingleData";
 import Link from "next/link";
 import Image from "next/image";
@@ -457,9 +457,9 @@ export default function BlogPage(props) {
                 ))}
                 <div className="blog-page-article-socials">
                   Share:
-                  {/* <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
+                  <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
                   <Image src={Facebook} alt="" onClick={shareToFacebook} className="blog-social-b" width="28" height="28" />
-                  <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" /> */}
+                  <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" />
                 </div>
               </div>
             </div>

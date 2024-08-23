@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogSingleData from '@/api/blog/BlogSingleData'; // Assuming this fetches blog data
-import BlogPage from '@/components/blog-page/blog-landing/blog-single/BlogSingle'; 
+import BlogPage from '@/components/blog-page/blog-single/BlogSingle'; 
 export async function generateMetadata({ params, searchParams }, parent) {
   const id= params.slug;
   const product = BlogSingleData.find(blog => blog.id === id);
