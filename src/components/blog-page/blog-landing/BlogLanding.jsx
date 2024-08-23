@@ -12,7 +12,7 @@ export default function BlogLanding(){
                 <div className="blog-landing-container">
 
                     {BlogSingleData.slice(0,1).map((item,index)=>(
-                        <div className="blog-landing-banner">
+                        <Link href={`/${item.id}`} className="blog-landing-banner">
                             <div className="blog-landing-banner-image">
                                 <Image src={item.image} alt={item.alt} />
                             </div>
@@ -25,7 +25,7 @@ export default function BlogLanding(){
                                     <p>{item.date}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     )
                     )}
 

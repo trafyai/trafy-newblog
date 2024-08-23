@@ -250,16 +250,9 @@
       } */
   }
   @media only screen and (max-width: 400px) {
-    /* .menu-mobile-contents{
-          width: 103vw;
-          top: 37px;
-          right: -26px;
-          height: calc(95vh - 48px);
-      } */
-    /* .trafy-logo {
-      height: 24px;
-      width: 60px;
-    } */
+    .navbar-container {
+      width: 90%;
+    }
   
   }
   
