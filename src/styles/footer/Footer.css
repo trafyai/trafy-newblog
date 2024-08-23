@@ -1,0 +1,123 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+    background-color: #02020a;
+    padding: 16px 48px;
+    padding-top:48px;
+    border-top: 1px solid #322E3A; 
+  }
+  
+  .footer-container{
+    width:80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  }
+  .footer-container-contents{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+  }
+  .footer-content-heading h2{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: var(--h-text-w-clr);
+  }
+  .footer-content-text a{
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+  }
+  .footer-content-text p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #c9c9ca;
+    line-height: 150%;
+    margin: 0;
+  }
+  .footer-content-text p:hover{
+    color:var(--h-text-w-clr);
+  }
+  .social-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-line{
+    border:1px solid #373636;
+  }
+  .socials{
+    display: flex;
+    gap:1.5rem;
+  }
+  .socials img{
+  width: 20px;
+  height: 20px;
+  }
+  
+  .copyrights{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    row-gap: 4px;
+    margin-bottom: 20px;
+  }
+  .footer-logo img{
+    height: 32px;
+  }
+  .copyright-text{
+    color: var(--h-text-w-clr);
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    text-decoration: none;  
+  }
+  .copyright-text a{
+    text-decoration: none;
+    color: #96e1ab;
+  }
+  
+  @media only screen and (min-width:601px) and (max-width:1024px){
+    .footer-container-contents{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap:2rem;
+      column-gap: 4rem;  
+    }
+  }
+  
+  @media only screen and (max-width:600px){
+    .footer{
+      padding: 12px;
+      padding-top: 50px;
+    }
+    .footer-container-contents{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap:2rem;
+      column-gap: 4rem; 
+    }
+    .social-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:1rem;
+    }
+    .copyrights{
+      justify-content: center;
+    }
+    .footer-container{
+      gap:1.5rem;
+    }
+  }

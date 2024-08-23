@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  
+    --h-text-b-clr:#1c1623;    /* */
+    --card-bg:#322a3b;
+    --p-text-b-clr:#3f3f3f;
+    --trafy-purple:#6D28D9;
+    --h-w-text:#fcf8fc;
+    --h-text-w-clr:#fcfefe;    /* */
+    --h-text-w-alt-clr:#fdfdfd;
+    --p-text-w-clr:#e2e2e2;
+    --uiux-bg-clr:#f9f7ff;
+    --uiux-o-bg-clr:#f4f0ff;
+    /* --landing-heading-clr:#fcf; */
+    --h-font:'Poppins', sans-serif;
+    --p-font:'Inter', sans-serif;
+
+    /* new */
+   
+
+    --dom-black:#1c1623;
+  
+
+
+    --trafy-black:#02020a;
+    --trafy-white:#ffffff;
+    --trafy-blue:#2A42F2;
+    --h-black:#02020a;
+    /* --p-black:#3e3e3e; */   --p-black:#424242;
+    --h-white:#ffffff;
+    --p-white:#d1d1d1;
+    --box-border:#e1e3e1;
+
+   /* ==================header====================== */
+   --header-border:#353535;
+
+
+
+    /* landing-page */
+    --landing-bg:#1c1623;
+    --landing-cards-bg:#322a3b;
+    /* --landing-cards-border:#5f5f5f; */
+    
+    --landing-heading-clr:#f8f8ff;
+    --landing-para-clr:#c8c1d1;
+
+    --landing-button-t:#1c1623;
+    
+    --landing-cards-border:#3e3e3e;
+    --landing-cards-bg:#2b2432;
+
+
+    --course-border:#b0b0b0;
+    --course-form-bg:#2c2634;
+    --course-form-border:#524d58;
+
+
+
+/* ===================================new design============================ */
+--landing-bg-n:#222222;
+--landing-heading-clr-n:#FCF8FC;
+--landing-para-clr-n:#E2E2E2;
+--landing-btn-n:#FFD372;
+
+
+
+  }
+
+  *{
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    
+    body {
+      margin: 0;
+      overflow-y: scroll;
+    }
+
+
+ 
