@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
-// import whiteLogo from "@public/assets/Images/comman/header/blackLogo.png";
-// import trafyIcon from "@public/assets/Images/comman/header/trafy icon.png";
+import whiteLogo from "@/public/Images/header/blackLogo.png";
+import trafyIcon from "@/public/Images/header/trafy icon.png";
 
-// import close1 from "@public/assets/Images/comman/header/close.svg";
-// import blackHamburger from "@public/assets/Images/comman/header/hamburger.svg";
+import close1 from "@/public/Images/header/close.svg";
+import blackHamburger from "@/public/Images/header/hamburger.svg";
 import { UserAuth } from "@/context/AuthContext";
-// import Default from "@public/assets/Images/comman/header/default.svg"
+import Default from "@/public/Images/header/default.svg"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -86,8 +86,8 @@ const Header = () => {
 
           <Link href="/">
             {" "}
-            {/* <Image src={trafyIcon} className="trafy-icon"/>
-            <Image src={whiteLogo} alt="trafy logo" className="trafy-logo" /> */}
+            <Image src={trafyIcon} className="trafy-icon"/>
+            <Image src={whiteLogo} alt="trafy logo" className="trafy-logo" />
           </Link>
         </div>
 
@@ -147,13 +147,13 @@ const Header = () => {
                       fontFamily: "Inter",
                     }}
                   >
-                    {/* <Image
+                    <Image
                       src={user?.profilePicURL || Default}
                       alt="Profile"
                       width={24}
                       height={24}
                       style={{ borderRadius: "50%" }}
-                    /> */}
+                    />
                   </div>
                 </div>
 
@@ -191,18 +191,18 @@ const Header = () => {
             >
              Courses
             </Link>
-          {/* <Image
+          <Image
             src={blackHamburger}
             alt=""
             className={`hamburger ${menuOpen ? "hide" : ""}`}
             onClick={toggleMenu}
-          /> */}
-          {/* <Image
+          /> 
+           <Image
             src={close1}
             alt=""
             className={`exit-icon ${menuOpen ? "show" : ""}`}
             onClick={toggleMenu}
-          /> */}
+          />
 
           {menuOpen && (
             <div className="menu-mobile-contents" ref={menuRef}>
@@ -303,13 +303,13 @@ const Header = () => {
                       fontFamily: "Inter",
                     }}
                   >
-                    {/* <Image
+                    <Image
                       src={user?.profilePicURL || Default}
                       alt="Profile"
                       width={24}
                       height={24}
                       style={{ borderRadius: "50%" }}
-                    /> */}
+                    />
                   </div>
                 </div>
 
