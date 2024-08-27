@@ -1,3 +1,4 @@
+
 import React from 'react';
 import BlogSingleData from '@/api/blog/BlogSingleData'; // Assuming this fetches blog data
 import BlogPage from '@/components/blog-page/blog-single/BlogSingle'; 
