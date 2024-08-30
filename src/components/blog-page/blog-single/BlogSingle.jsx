@@ -501,12 +501,20 @@ export default function BlogPage(props) {
                       </div>
                     ))}
 
+                   
+
                   </div>
                     
 
                 ))}
 
             
+          </section>
+
+          <section className="blog-page-conclusion">
+                  {props.conclusion && props.conclusion.map((conc,concIndex)=>(
+                      <p key={concIndex}>{conc}</p>
+                    ))}
           </section>
 
           {/* Other Blogs Section */}
@@ -536,7 +544,7 @@ export default function BlogPage(props) {
                       <p>
                       {/* {item.description} */}
 
-                      {String(item.description).slice(0, 130)}...
+                      {String(item.description).slice(0, 80)}...
                       </p>
                       </div>
                       {/* <div className="blog-other-blogs-card-author">
