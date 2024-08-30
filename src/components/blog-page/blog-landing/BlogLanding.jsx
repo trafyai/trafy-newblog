@@ -22,7 +22,7 @@ export default function BlogLanding(){
                                 <h1>{item.title}</h1>
                                 <p>{item.metaDescription}</p>
                                 <div className="blog-landing-banner-author">
-                                    <p>By <strong>Suthersun</strong></p>
+                                    <p>By <strong>{item.author}</strong></p>
                                     <span>|</span>
                                     <p>{item.date}</p>
                                 </div>

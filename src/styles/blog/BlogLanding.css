@@ -1,6 +1,6 @@
 .blog-landing-page{
     padding-top: 160px;
-    padding-bottom: 60px;
+    padding-bottom: 160px;
     display: flex;
     justify-content: center;
     background-color:#fcfcfc;
@@ -61,6 +61,7 @@
 }
 .blog-landing-banner-author span{
     font-size: 16px;
+    color: var(--h-black);
 }
 
 

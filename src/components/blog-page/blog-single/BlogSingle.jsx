@@ -301,7 +301,7 @@ export default function BlogPage(props) {
   const [errorMessage, setErrorMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  const currentPageUrl = `https://blog.trafyai.com/blogs/${props.id}`;
+  const currentPageUrl = `https://blog.trafyai.com/${props.id}`;
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -384,23 +384,53 @@ export default function BlogPage(props) {
     }
   };
 
+  // const shareToLinkedIn = () => {
+  //   const postTitle = encodeURIComponent(props.title);
+  //   const postUrl = encodeURIComponent(currentPageUrl);
+  //   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}`, '_blank', 'width=600,height=400');
+  // };
+
   const shareToLinkedIn = () => {
-    const postTitle = encodeURIComponent(props.title);
     const postUrl = encodeURIComponent(currentPageUrl);
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}`, '_blank', 'width=600,height=400');
+    const postTitle = encodeURIComponent(props.title);
+    const postSummary = encodeURIComponent(props.metaDescription);
+    const postImage = encodeURIComponent(props.image);
+  
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}&summary=${postSummary}&source=${postUrl}&image=${postImage}`;
+    window.open(linkedinUrl, '_blank', 'width=600,height=400');
   };
 
+  
+  // const shareToTwitter = () => {
+  //   const postTitle = encodeURIComponent(props.title);
+  //   const postUrl = encodeURIComponent(currentPageUrl);
+  //   window.open(`https://twitter.com/intent/tweet?text=${postTitle}&url=${postUrl}`, '_blank', 'width=600,height=400');
+  // };
   const shareToTwitter = () => {
-    const postTitle = encodeURIComponent(props.title);
     const postUrl = encodeURIComponent(currentPageUrl);
-    window.open(`https://twitter.com/intent/tweet?text=${postTitle}&url=${postUrl}`, '_blank', 'width=600,height=400');
+    const postText = encodeURIComponent(`${props.title} - ${props.metaDescription}`);
+    const postImage = encodeURIComponent(props.image);  // Optional as Twitter handles images through cards
+  
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${postText}&url=${postUrl}&image=${postImage}`;
+    window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
+  
 
+  // const shareToFacebook = () => {
+  //   const postTitle = encodeURIComponent(props.title);
+  //   const postUrl = encodeURIComponent(currentPageUrl);
+  //   window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
+  // };
   const shareToFacebook = () => {
-    const postTitle = encodeURIComponent(props.title);
     const postUrl = encodeURIComponent(currentPageUrl);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
+    const postTitle = encodeURIComponent(props.title); // Not always necessary
+    const postDescription = encodeURIComponent(props.metaDescription); // Not always necessary
+    const postImage = encodeURIComponent(props.image); // Not always necessary
+  
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}&quote=${postTitle}&description=${postDescription}&image=${postImage}`;
+    window.open(facebookUrl, '_blank', 'width=600,height=400');
   };
+  
 
   return (
     <main>

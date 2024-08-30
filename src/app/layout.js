@@ -7,7 +7,7 @@ import { AuthContextProvider } from "@/context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "trafy - Your Personalised AI mentor",
+  title: "trafy blog | Latest on AI, Design, Marketing and Sales",
   description:
     "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
   metadataBase: new URL("https://blog.trafyai.com/"),
