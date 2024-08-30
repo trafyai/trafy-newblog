@@ -6,12 +6,14 @@ import Image from "next/image";
 
 
 export default function BlogLanding(){
+
     return(
         <main>
             <div className="blog-landing-page">
                 <div className="blog-landing-container">
 
                     {BlogSingleData.slice(0,1).map((item,index)=>(
+                    
                         <Link href={`/${item.id}`} className="blog-landing-banner">
                             <div className="blog-landing-banner-image">
                                 <Image src={item.image} alt={item.alt} />
@@ -31,7 +33,7 @@ export default function BlogLanding(){
 
                     <div className="blog-landing-content">
 
-                        {BlogSingleData.map((item,index)=>
+                        {BlogSingleData.slice(1, 4).map((item,index)=>
                     
                         <div className="blog-landing-card" key={index}>
                             
@@ -49,8 +51,9 @@ export default function BlogLanding(){
                             </div>
                             <div className="blog-landing-card-description">
                             <p>
-                            {item.metaDescription}
-                            {/* {item.description.split(' ').slice(0, 15).join(' ')}{item.description.split(' ').length > 15 ? '...' : ''} */}
+                            {/* {item.description} */}
+
+                            {String(item.description).slice(0, 130)}...
                             </p>
                             </div>
                             <div className="blog-landing-card-author">

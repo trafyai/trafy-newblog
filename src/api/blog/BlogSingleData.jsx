@@ -5,69 +5,81 @@ import Facebook from '@/public/Images/socials/facebook.png';
 import keyP from '@/public/Images/blog/5 key principles.png';
 import immersive from '@/public/Images/blog/immersive ui design.png';
 import digital from '@/public/Images/blog/digital dimension.png';
-
+import basicOfSeo from '@/public/Images/blog/the-basic-of-seo-what-every-business-owner-should-know.png'
 
 
 const BlogSingleData= [
   {
-    id: "Key-Principles-for-Seamless-User-Experiences-test",
+    id: "the-basic-of-seo-what-every-business-owner-should-know",
     bgcolor: "#82a8fd",
     metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/5%20key%20principles.png?alt=media&token=dedf64ee-262b-46af-8956-b08aa08a8981",
-    category: "UI/UX Design",
-    read: "4.7 minutes read",
-    title: "5 Key Principles for Seamless User Experiences",
+    category: "Marketing",
+    read: "3 minutes read",
+    title: "The Basic of SEO : What Every Business Owner Should Know",
     author: "Suthersun",
-    date: "April 04, 2024",
-    image: keyP,
+    date: "August 30, 2024",
+    image: basicOfSeo,
     twitter:Twitter,
     linkedin:Linkedin,
     facebook:Facebook,
     description: [
-      "In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services. Whether it's a website, a mobile app, or any digital platform, the way users interact with it can make or break its success. UI/UX design principles serve as the foundation for creating intuitive, engaging, and user-friendly experiences. Let's explore five fundamental principles that drive effective UI/UX design."
+      "Search Engine Optimisation (SEO) is one of the organic ways of marketing. SEO helps search engines like Google, Bing, Yahoo, Baidu,etc, to understand what your website and through search engines your target users find your website."
     ],
-    metaDescription:"In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services.",
+    metaDescription:"Search Engine Optimisation (SEO) is one of the organic ways of marketing. SEO helps search engines like Google, Bing, Yahoo, Baidu,etc, to understand what your website and through search engines your target users find your website.",
+    introduction:[
+      "Starting your business and finding your client might be quite intimidating. It is hard to secure clients, buyer at the initial stage of your business unless you are a celebrity who already has a massive following and access to mass media.",
+      "It doesn’t mean a common person can’t start a business or a brand and be successful, it just takes the right strategy to do it. Setting up your website and showing your products and services is the way to start. To grow and make sales through your website you have to make your website optimized for search engines to understand your website and display your website in Search Engine Results Page (SERP).",
+      "To create a highly performing SEO is essential to understand how Google analyzes your website and what are the parameters it will consider to display your website in the Search Engine Results Page (SERP).",
+    ],
     mainArticle: [
       {
-        heading: "1. User-Centered Design",
+        heading: "Get Founded by Google",
         description: [
-          "At the core of UI/UX design lies the principle of user-centered design. This approach prioritizes the needs, preferences, and behaviors of the target audience throughout the design process. Understanding the users' goals and challenges enables designers to create interfaces that align seamlessly with user expectations.",
-          "To implement user-centered design effectively, designers must conduct thorough user research. This involves gathering insights through techniques such as user interviews, surveys, and usability testing. By empathizing with users and gaining a deep understanding of their motivations, designers can craft interfaces that cater to their needs and enhance their overall experience."
+          "Ranking on Google's Search Engine Results Page (SERP) doesn’t involve any cost, it just asks you to publish your website online and add a few analytics tools like Google Analytics, Google Tag Manager and discovery tools like Google Search Console to tell Google that your website exists.",
+          "Google constantly and automatically crawls through all the websites in the internet to find our the website with relevant and latest information. To perform this action Google uses a program called Crawler. The main objective of Crawler is to Discover, Crawl and Serve web pages."
         ]
       },
       {
-        heading: "2. Consistency",
+        heading: "Parameters that Google looks for in your website",
         description: [
-          "Consistency is key to creating cohesive and intuitive UI/UX designs. Consistent design elements, such as color schemes, typography, and navigation patterns, help users understand how to interact with the interface effectively. When users encounter familiar elements across different screens or sections, it reduces cognitive load and enhances usability.",
-          "Maintaining consistency requires adherence to design systems and style guides. These resources outline standardized design principles, components, and patterns that ensure a uniform experience across various touchpoints. By following consistent design conventions, designers can build trust with users and streamline their journey through the interface."
+          "While making ranking decisions Googles primarily looks for reliability and originality of a content. As Google primary policies states, “Create helpful, reliable, and people-first content”. Here are four major points you have to consider as a business owner when you perform your SEO.",
+        ],
+        subArticle:[
+          {
+            heading:"Technical SEO",
+            description:[
+              "Technical SEO refers to the optimization that is required in your website site architecture that is essential for crawlers to crawl through your website and index it in the SERP. ",
+              "To have an effective Technical SEO you have to have a well defined site map / site architecture, your website should be optimized for the mobile screens, and you have to have an optimum page loading speed.",
+              "Google considers the pages with good built quality to be effective and reliable. ",
+            ]
+          },
+          {
+            heading:"Keyword Research",
+            description:[
+              "We create content to help our targeted audiences and users to know about the product or service we offer. Educating our audience and users is one of the best ways to build trust thereby creating a relationship.",
+              "There are many ways to create helpful content. We can do surveys, collect feedback, get suggestions and build our content based on that. This will surely help but there is a much simpler way to start with, that is Keyword Research.",
+              "Millions of searches happen every second in Google and there are various tools that analyze these searches and provide you with a list of searches that are relevant to your business, brand and industry.",
+              "These Search terms are called Keywords. Pick the keywords that are relevant to your content topic and try to provide useful and original information on the topic. This will increase your possibility of getting indexed in the Google SERP.",
+            ]
+          },
         ]
       },
       {
-        heading: "3. Accessibility",
+        heading: "Local SEO",
         description: [
-          "Accessibility is an essential aspect of UI/UX design that ensures inclusivity for users of all abilities. Designing with accessibility in mind means making interfaces perceivable, operable, and understandable for everyone, including those with disabilities. This includes considerations for visual impairments, motor disabilities, cognitive limitations, and more.",
-          "Incorporating accessibility features such as alternative text for images, keyboard navigation, and high contrast options not only benefits users with disabilities but also enhances the overall usability of the interface for all users. By prioritizing accessibility, designers create experiences that are welcoming and usable for a diverse audience."
-
+          "Every business has a geographical location within which it serves. Even the big business have a different website and different policy for each location it serves.",
+          "Google Local Search Algorithm is carefully created to help the local business found first on the local searches. For example you can now find a vegan food store, fuel station, bus stop that are closest to where you are and where you want to find it.",
+          "Businesses can get highly beneficial when they optimize their website for the Local Searches. Creating and verifying your Google Business profile will be the easiest way to start it."
             ]
       },
-      {
-        heading: "4. Visual Hierarchy",
-        description: [
-          "Visual hierarchy plays a crucial role in guiding users' attention and prioritizing content within an interface. By strategically arranging elements based on their importance, designers can direct users' focus and facilitate seamless interaction. Visual hierarchy is established through factors such as size, color, contrast, and placement.",
-          "Key components, such as calls-to-action and important information, should be prominently displayed to draw users' attention effectively. Conversely, less critical elements should be visually subdued to prevent distraction. By understanding the principles of visual hierarchy, designers can create interfaces that are visually engaging and easy to navigate."   
 
-          ]
-      },
-      {
-        heading: "5. Feedback and Iteration",
-        description: [
-          "UI/UX design is an iterative process that thrives on feedback and continuous improvement. Gathering feedback from users through usability testing, surveys, and analytics enables designers to identify pain points and areas for enhancement. By iteratively refining the interface based on user input, designers can create experiences that evolve to meet users' evolving needs.",
-          "Additionally, staying updated with industry trends, technological advancements, and user preferences is essential for staying relevant in UI/UX design. Embracing a mindset of continuous learning and adaptation allows designers to stay ahead of the curve and deliver experiences that resonate with users in an ever-changing landscape.",
-          "Mastering UI/UX design requires a deep understanding of fundamental principles that underpin effective user experiences. By embracing user-centered design, consistency, accessibility, visual hierarchy, and a culture of feedback and iteration, designers can create interfaces that captivate users and drive success in today's digital ecosystem."
-          ]
-      },
-
+    ],
+    conclusion:[
+      "As every other marketing strategy SEO is a long term game. You have to keep creating useful content and make sure to update and repurpose it constantly. Having a Search Engine Optimised website will build trust and reliability to your website and business.",
+      "Keep conducting user research and site audits to keep your website relevant and updated. With every new content, with every audit you will be getting closer and closer to land on the first page of SERP."
     ]
   },
+  
   {
     id: "Key-Principles-for-Seamless-User-Experiences",
     bgcolor: "#82a8fd",

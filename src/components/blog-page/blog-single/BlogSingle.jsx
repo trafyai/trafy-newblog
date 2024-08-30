@@ -8,7 +8,7 @@
 // import Linkedin_w from '@public/Images/socials-white/linkedin-w.png';
 // import Facebook_w from '@public/Images/socials-white/facebook-w.png';
 // import SS from '@public/Images/blog/ss.jpeg';
-// import BlogLandingData from "@api/blog/BlogLandingData";
+// import Blogother-blogsData from "@api/blog/Blogother-blogsData";
 // import Link from "next/link";
 // import Image from "next/image";
 
@@ -240,7 +240,7 @@
 //               </div>
 
 //               <div className="blog-other-blogs-content">
-//               {BlogLandingData.map((item,index)=>
+//               {Blogother-blogsData.map((item,index)=>
                    
 //                    <div className="blog-other-blogs-card" key={index}>
                        
@@ -406,103 +406,119 @@ export default function BlogPage(props) {
     <main>
       <div className="blog-page">
         <div className="blog-page-container">
-          {/* Hero Section */}
+         
           <section className="blog-page-hero-section">
-            <div className="blog-page-hero-section-container">
+
               <div className="blog-page-hero-section-category">
                 <p className="blog-page-hero-category">{props.category}</p>
               </div>
+
               <div className="blog-page-hero-section-heading">
                 <h1>{props.title}</h1>
               </div>
+
               <div className="blog-page-hero-section-para">
                 <p>{props.metaDescription}</p>
               </div>
+
               <div className="blog-page-hero-section-author">
                 <p>By <span style={{ fontWeight: "700" }}>{props.author} </span></p>
                 <span style={{ color: "#d1d1d1" }}>|</span>
                 <p>{props.date}</p>
                 <p>{props.read}</p>
               </div>
-            </div>
+
+             
           </section>
 
-          {/* Article Section */}
-          <section className="blog-page-article-section">
-            <div className="blog-page-article-section-container">
-              <div className="blog-page-article-contents">
-                {Array.isArray(props.description) ? (
-                  props.description.map((desc, descIndex) => (
-                    <div className="blog-page-article-socials-description" key={descIndex}>
-                      {/* Add content here */}
-                    </div>
-                  ))
-                ) : (
-                  <div className="blog-page-article-socials-description">
-                    <p>{props.description}</p>
-                  </div>
-                )}
-
-                {props.mainArticle && props.mainArticle.map((article, mainIndex) => (
-                  <div className="blog-page-article-main-contents" key={mainIndex}>
-                    <h1 id={mainIndex}>{article.heading}</h1>
-                    {Array.isArray(article.description) ? (
-                      article.description.map((desc, descIndex) => (
-                        <p key={descIndex}>{desc}</p>
-                      ))
-                    ) : (
-                      <p>{article.description}</p>
-                    )}
-                  </div>
-                ))}
-                <div className="blog-page-article-socials">
-                  Share:
+          <section className="blog-page-blog-image">
+            <Image src={props.image}/>
+            <div className="blog-page-article-socials">
+                  {/* Share: */}
                   <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
                   <Image src={Facebook} alt="" onClick={shareToFacebook} className="blog-social-b" width="28" height="28" />
                   <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" />
                 </div>
-              </div>
-            </div>
+          </section>
+
+               {props.introduction && 
+         <section className="blog-page-introduction">
+                {props.introduction.map((intro,index)=>(
+                  <p key={index}>{intro}</p>
+                ))}
+          </section>
+               }
+
+        
+          <section className="blog-page-article-section">
+    
+                {props.mainArticle && props.mainArticle.map((article, mainIndex) => (
+                  <div className="blog-page-article-main-contents" key={mainIndex}>
+                    <h1 id={mainIndex}>{article.heading}</h1>
+
+                    {article.description && article.description.map((desc, descIndex) => (
+                        <p key={descIndex}>{desc}</p>
+                      ))
+                    }
+
+                    {article.subArticle && article.subArticle.map((subarticle,subIndex)=>(
+                      <div className="blog-page-subarticle" key={subIndex}>
+                          <h2>{subarticle.heading}</h2>
+
+                          {subarticle.description.map((subDesc,descIndex)=>(
+                            <p key={descIndex}>{subDesc}</p>
+                          ))}
+                      </div>
+                    ))}
+
+                  </div>
+                    
+
+                ))}
+
+            
           </section>
 
           {/* Other Blogs Section */}
           <section className="blog-other-blogs">
-            <div className="blog-other-blogs-container">
               <div className="blog-other-blog-heading">
                 <h2>Other Resources</h2>
               </div>
 
               <div className="blog-other-blogs-content">
                 {BlogSingleData.filter(item => item.id !== props.id).slice(0, 3).map((item, index) => (
-                  <div className="blog-other-blogs-card" key={index}>
-                    <Link href={`/${item.id}`} className="blog-other-blogs-card-inner">
-                      <div className="blog-other-blogs-card-image" style={{ backgroundColor: item.bgColor }}>
-                        <Image src={item.image} alt={item.alt} height="max-content" />
+
+                      <div className="blog-other-blogs-card" key={index}>
+                            
+                      <Link href={`/${item.id}`}  className="blog-other-blogs-card-inner">
+                      <div className="blog-other-blogs-card-image" >
+                          <Image src={item.image} alt={item.alt} height="max-content"/>
                       </div>
                       <div className="blog-other-blogs-card-content">
-                        <div className="blog-other-blogs-card-category">
+                      {/* <div className="blog-other-blogs-card-category">
                           <h1>{item.category}</h1>
                           <p>{item.read}</p>
-                        </div>
-                        <div className="blog-other-blogs-card-heading">
+                      </div> */}
+                      <div className="blog-other-blogs-card-heading">
                           <h1>{item.title}</h1>
-                        </div>
-                        <div className="blog-other-blogs-card-description">
-                          <p>
-                            {item.metaDescription}
-                            {/* {item.description.split(' ').slice(0, 15).join(' ')}{item.description.split(' ').length > 15 ? '...' : ''} */}
-                          </p>
-                        </div>
-                        <div className="blog-other-blogs-card-author">
+                      </div>
+                      <div className="blog-other-blogs-card-description">
+                      <p>
+                      {/* {item.description} */}
+
+                      {String(item.description).slice(0, 130)}...
+                      </p>
+                      </div>
+                      {/* <div className="blog-other-blogs-card-author">
                           <p>{item.author}</p>
                           <p>{item.date}</p>
-                        </div>
+                      </div> */}
                       </div>
-                    </Link>
+                      </Link>
                   </div>
+
                 ))}
               </div>
-            </div>
           </section>
 
           {/* Newsletter Section */}
