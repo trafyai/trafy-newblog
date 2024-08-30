@@ -25,10 +25,13 @@ const Page = ({ params }) => {
   const BlogData = BlogSingleData.find(blog => blog.id === id);
 
   return (
+    <>
+
     <div>
        
       <BlogPage {...BlogData} />
     </div>
+    </>
   );
 };
 
