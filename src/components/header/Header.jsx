@@ -96,9 +96,9 @@ const Header = () => {
         <div className="menu-lg">
         <div className="menu-left">
             <Link
-              href="/courses"
+              href="https://trafyai.com/courses"
               className="menu-pathway"
-              onClick={() => handleNavigation("/courses")}
+              onClick={() => handleNavigation("https://trafyai.com/courses")}
             >
              Courses
             </Link>
@@ -184,9 +184,9 @@ const Header = () => {
                   {/* 0------------------------------------Hamburger----------------------------------- */}
         <div className="menu-mobile">
         <Link
-              href="/courses"
+              href="https://trafyai.com/courses/"
               className="menu-pathway"
-              onClick={() => handleNavigation("/courses")}
+              onClick={() => handleNavigation("https://trafyai.com/courses")}
               style={{paddingRight:"16px"}}
             >
              Courses
