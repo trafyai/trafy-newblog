@@ -3,6 +3,8 @@ import '@/styles/globals.css';
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { AuthContextProvider } from "@/context/AuthContext";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
             {children}
             <Footer/>
         </AuthContextProvider>
+        <GoogleAnalytics gaId=" G-329K7NDLKZ" />
+
         </body>
       
     </html>
