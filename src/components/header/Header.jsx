@@ -160,14 +160,14 @@ const Header = () => {
                 {hover && (
                   <div className="menu-user-dropdown">
                     <Link
-                      href="/account-settings"
-                      onClick={() => handleNavigation("/account-settings")}
+                      href="https://trafyai.com/account-settings"
+                      // onClick={() => handleNavigation("https://trafyai.com/account-settings")}
                     >
                       <p>Profile</p>
                     </Link>
                     <Link
-                      href="/account-security"
-                      onClick={() => handleNavigation("/account-security")}
+                      href="https://trafyai.com/account-security"
+                      onClick={() => handleNavigation("https://trafyai.com/account-security")}
                     >
                       <p>Security</p>
                     </Link>
