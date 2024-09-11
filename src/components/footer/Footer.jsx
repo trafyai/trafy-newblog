@@ -9,15 +9,14 @@ import facebook from '@/public/Images/footer/facebook.png';
 import instagram from '@/public/Images/footer/instagram (2).png';
 import twitter from '@/public/Images/footer/twitter (1).png';
 import behance from '@/public/Images/footer/behance.png';
-// import WhiteLogo from '@/public/Images/header/whiteLogo.png';
+import WhiteLogo from '@/public/Images/header/whiteLogo.png';
 import Link from "next/link";
-
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
 
-        <div className="footer-container-contents">
+        {/* <div className="footer-container-contents">
 
           <div className="footer-content">
             <div className="footer-content-heading"><h2>Solutions</h2></div>
@@ -66,12 +65,18 @@ function Footer() {
             <div className="footer-content-text"><p>Freelancers & Affiliate Policy</p></div>
           </div>
 
-        </div>
+        </div> */}
 
-        <hr className="footer-line" />
+        {/* <hr className="footer-line" /> */}
 
         <div className="social-section">
           {/* <div className="footer-logo"><Image src={WhiteLogo} alt="trafy logo" width={77.612} height={32} /></div> */}
+          <div className="footer-content">
+            <div className="footer-content-text"><Link href="/terms-of-service"> <p>Terms of Service</p> </Link></div>
+            <div className="footer-content-text"><Link href="/privacy-policy"><p>Privacy Policy</p></Link></div>
+            <div className="footer-content-text"><Link href="/cookie-policy"><p>Cookie Policy</p></Link></div>
+            <div className="footer-content-text"><Link href="/refund-policy"><p>Refund Policy</p></Link></div>
+          </div>
           <div className="socials">
            <a href="https://www.linkedin.com/company/trafyai"><Image src={linkedin} alt="linkedin" /></a>
             <a href="https://www.facebook.com/trafyai"><Image src={facebook} alt="facebook" /></a>
@@ -82,7 +87,10 @@ function Footer() {
         </div>
 
         <div className="copyrights">
-          <div className="copyright-text">© 2024 trafy. | <a href="">Commitments</a></div>
+          <div className="footer-logo"><Image src={WhiteLogo} alt="trafy logo" width={77.612} height={32} /></div>
+          <div className="copyright-text">© 2024 trafy.
+             {/* | <span>Commitments</span> */}
+             </div>
         </div>
 
       </div>
