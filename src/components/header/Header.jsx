@@ -289,7 +289,7 @@ const Header = () => {
              
             ) : (
               <div className="menu-profile">
-                <div onClick={handleDropDown}>
+                <Link href="/account-setting">
                   <div
                     style={{
                       width: "24px",
@@ -311,25 +311,9 @@ const Header = () => {
                       style={{ borderRadius: "50%" }}
                     />
                   </div>
-                </div>
+                </Link>
 
-                {hover && (
-                  <div className="menu-user-dropdown">
-                    <Link
-                      href="/account-settings"
-                      onClick={() => handleNavigation("/account-settings")}
-                    >
-                      <p>Profile</p>
-                    </Link>
-                    <Link
-                      href="/account-security"
-                      onClick={() => handleNavigation("/account-security")}
-                    >
-                      <p>Security</p>
-                    </Link>
-                    <p onClick={handleLogOut}>Logout</p>
-                  </div>
-                )}
+                
               </div>
             )}
           </div>
