@@ -1,13 +1,13 @@
 'use client';
-import React, { useState , useEffect} from "react";
-import '@styles/common/auth/login.css';
+import React, { useState, useEffect } from "react";
+import '@/styles/auth/login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { ref, set } from 'firebase/database';
-import { auth, database } from '@firebase'; // Adjust this path based on your actual file structure
+import { ref, set, get } from 'firebase/database';
+import { auth, database } from '@/firebase'; // Adjust this path based on your actual file structure
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
@@ -27,7 +27,7 @@ const Login = () => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // Redirect if user is already logged in
-                router.back(); // Redirect to home or another page
+                router.push('/'); // Redirect to home or another page
             } else {
                 setLoading(false); // Set loading to false when done
             }
@@ -78,19 +78,26 @@ const Login = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
-            // Store user data in Firebase Realtime Database
+            // Fetch existing user data
             const userRef = ref(database, 'usersData/' + user.uid);
-            await set(userRef, {
+            const snapshot = await get(userRef);
+            let existingData = snapshot.exists() ? snapshot.val() : {};
+
+            // Merge existing data with new data
+            const updatedData = {
+                ...existingData,
                 uid: user.uid,
                 email: user.email,
-                firstName: user.email.split('@')[0],
-            });
+                firstName: existingData.firstName || user.email.split('@')[0],
+            };
 
             document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
             document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
-        
 
-            // router.push('/');
+            // Save merged data back to the database
+            await set(userRef, updatedData);
+
+            router.back();
 
         } catch (error) {
             if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
@@ -111,19 +118,26 @@ const Login = () => {
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
 
-            // Store user data in Firebase Realtime Database
+            // Fetch existing user data
             const userRef = ref(database, 'usersData/' + user.uid);
-            await set(userRef, {
+            const snapshot = await get(userRef);
+            let existingData = snapshot.exists() ? snapshot.val() : {};
+
+            // Merge existing data with new data
+            const updatedData = {
+                ...existingData,
                 uid: user.uid,
                 email: user.email,
-                firstName: user.email.split('@')[0],
-            });
+                firstName: existingData.firstName || user.email.split('@')[0],
+            };
 
             document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
             document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
 
+            // Save merged data back to the database
+            await set(userRef, updatedData);
 
-            // router.back();
+            router.back();
 
         } catch (err) {
             if (err.code === 'auth/cancelled-popup-request') {
@@ -133,7 +147,6 @@ const Login = () => {
             }
         }
     };
-
 
     return (
         <div className="login">
