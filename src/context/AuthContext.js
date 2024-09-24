@@ -7,7 +7,7 @@ import {
     onAuthStateChanged, deleteUser, reauthenticateWithCredential, EmailAuthProvider
 } from "firebase/auth";
 import { ref, remove } from "firebase/database";
-import { auth, database } from '@/firebase';
+import { auth, database } from '@firebase';
 
 const AuthContext = createContext();
 

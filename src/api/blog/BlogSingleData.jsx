@@ -1,14 +1,60 @@
-import Twitter from '@/public/Images/socials/twitter.png';
-import Linkedin from '@/public/Images/socials/linkedin.png';
-import Facebook from '@/public/Images/socials/facebook.png';
+import Twitter from '@public/assets/Images/common/common/socials/twitter.png';
+import Linkedin from '@public/assets/Images/common/common/socials/linkedin.png';
+import Facebook from '@public/assets/Images/common/common/socials/facebook.png';
 
-import keyP from '@/public/Images/blog/5 key principles.png';
-import immersive from '@/public/Images/blog/immersive ui design.png';
-import digital from '@/public/Images/blog/digital dimension.png';
-import basicOfSeo from '@/public/Images/blog/the-basic-of-seo-what-every-business-owner-should-know.png'
-
+import keyP from '@public/assets/Images/blog/5 key principles.png';
+import immersive from '@public/assets/Images/blog/immersive ui design.png';
+import digital from '@public/assets/Images/blog/digital dimension.png';
+import basicOfSeo from '@public/assets/Images/blog/the-basic-of-seo-what-every-business-owner-should-know.png'
+import aesthetic from '@public/assets/Images/blog/aesthetic usability.png'
 
 const BlogSingleData= [
+  {
+    id: "aesthetic-usability-effect-impact-of-visually-appealing-design",
+    bgcolor: "#82a8fd",
+    metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/WhatsApp%20Image%202024-09-24%20at%2014.58.09_983ccfea.jpg?alt=media&token=e09ce0aa-f6b3-4057-a635-c47562f9d755",
+    category: "User Experience",
+    read: "2 minutes read",
+    title: "Aesthetic Usability Effect - Impact of Visually Appealing Design",
+    author: "Steven Darvi",
+    date: "September 24, 2024",
+    image: aesthetic,
+    twitter:Twitter,
+    linkedin:Linkedin,
+    facebook:Facebook,
+    description: [
+      "Users tend to choose products with visually appealing designs and mostly ignore minor errors and discomforts in the functionality when the interface is clear and aesthetic. Brands use this effect to position their MVP’s and test in the market."
+    ],
+    metaDescription:"Users tend to choose products with visually appealing designs and mostly ignore minor errors and discomforts in the functionality when the interface is clear and aesthetic.",
+    introduction:[
+      "Product designers and scientists have been testing this effect over decades in different cases and subjects and releasing promising data that shows how visually appealing designs impact the purchase design and how some brands use it to stay ahead of competition.",
+      "Aesthetics and Usability are two driving factors for a product to sustain and have a market value. Users often position a product based on the use experience they have with the product.",
+      "However, a visually appealing design could save a product with minimal error but can’t save a product that’s a disaster or a product that doesn't have much to offer. Design assists technology to help it convey its usability and simpler, cleaner way to its users and it doesn’t work the other way around.",
+    ],
+    mainArticle: [
+      {
+        heading: "Study: Fall of Keypad phones and Rise of Smartphone",
+        description: [
+          "In the mid 2000’s major brands like Nokia, Motorola were launching extreme and straight out of Sci-fi models keypad phones that did nothing much better than any other model or the previous versions of it.",
+          "They believed that is want their customers require, and when the news spread that Apple and few other companies developing full touch screen despite having world’s best engineers and resources at that time, Nokia lacked to build a deployable technology.",
+          "On January 9, 2007 Iphone launch event Steve Jobs said, \“Every once in a while, a revolutionary product comes along that changes everything and Apple has been…\” Iphone became a revolutionary product and a new segment of the product market was created. Keypad mobile phone companies kept trying but eventually most of them fell. On the day Microsoft acquired Nokia, Nokia CEO ended his speech saying, “we didn’t do anything wrong, but somehow, we lost.”",
+          "This world-renowned study shows why design and usability should work inline with the other, sometimes one can save the other but it’s not always the case.",
+        ]
+      },
+      {
+        heading: "First Reported Aesthetic Usability Effect Study:",
+        description: [
+          "In 1995, two researchers in Hitachi Design Center Masaaki Kurosu and Kaori Kashimura studied the world’s first reported Aesthetic Usability Effect. They tested 26 versions of ATM UI, conducting research with 252 study volunteers. In their results they published their analysis showing \"the apparent usability is less correlated with the inherent usability compared to the apparent beauty\”.",
+
+        ],
+       
+      },
+
+    ],
+    conclusion:[
+      "Aesthetic Usability Effect is one of the primary laws of UX, when done right could save your product. It is always advised to conduct research on the visual design specific to a product. User acquisition and retention tends to increase when a product has a visually appealing design.",
+    ]
+  },
   {
     id: "the-basic-of-seo-what-every-business-owner-should-know",
     bgcolor: "#82a8fd",
@@ -101,7 +147,7 @@ const BlogSingleData= [
       {
         heading: "1. User-Centered Design",
         description: [
-          "At the core of UI/UX design lies the principle of user-centered design. This approach prioritizes the needs, preferences, and behaviors of the target audience throughout the design process. Understanding the users' goals and challenges enables designers to create interfaces that align seamlessly with user expectations.",
+          "At the core of UI/UX design lies the principle of user-centered design. This approach prioritizes the needs, preferences, and behaviors of the target audience throughout the design process. Understanding the users goals and challenges enables designers to create interfaces that align seamlessly with user expectations.",
           "To implement user-centered design effectively, designers must conduct thorough user research. This involves gathering insights through techniques such as user interviews, surveys, and usability testing. By empathizing with users and gaining a deep understanding of their motivations, designers can craft interfaces that cater to their needs and enhance their overall experience."
         ]
       },
@@ -123,15 +169,15 @@ const BlogSingleData= [
       {
         heading: "4. Visual Hierarchy",
         description: [
-          "Visual hierarchy plays a crucial role in guiding users' attention and prioritizing content within an interface. By strategically arranging elements based on their importance, designers can direct users' focus and facilitate seamless interaction. Visual hierarchy is established through factors such as size, color, contrast, and placement.",
-          "Key components, such as calls-to-action and important information, should be prominently displayed to draw users' attention effectively. Conversely, less critical elements should be visually subdued to prevent distraction. By understanding the principles of visual hierarchy, designers can create interfaces that are visually engaging and easy to navigate."   
+          "Visual hierarchy plays a crucial role in guiding users attention and prioritizing content within an interface. By strategically arranging elements based on their importance, designers can direct users focus and facilitate seamless interaction. Visual hierarchy is established through factors such as size, color, contrast, and placement.",
+          "Key components, such as calls-to-action and important information, should be prominently displayed to draw users attention effectively. Conversely, less critical elements should be visually subdued to prevent distraction. By understanding the principles of visual hierarchy, designers can create interfaces that are visually engaging and easy to navigate."   
 
           ]
       },
       {
         heading: "5. Feedback and Iteration",
         description: [
-          "UI/UX design is an iterative process that thrives on feedback and continuous improvement. Gathering feedback from users through usability testing, surveys, and analytics enables designers to identify pain points and areas for enhancement. By iteratively refining the interface based on user input, designers can create experiences that evolve to meet users' evolving needs.",
+          "UI/UX design is an iterative process that thrives on feedback and continuous improvement. Gathering feedback from users through usability testing, surveys, and analytics enables designers to identify pain points and areas for enhancement. By iteratively refining the interface based on user input, designers can create experiences that evolve to meet users evolving needs.",
           "Additionally, staying updated with industry trends, technological advancements, and user preferences is essential for staying relevant in UI/UX design. Embracing a mindset of continuous learning and adaptation allows designers to stay ahead of the curve and deliver experiences that resonate with users in an ever-changing landscape.",
           "Mastering UI/UX design requires a deep understanding of fundamental principles that underpin effective user experiences. By embracing user-centered design, consistency, accessibility, visual hierarchy, and a culture of feedback and iteration, designers can create interfaces that captivate users and drive success in today's digital ecosystem."
           ]
@@ -154,7 +200,7 @@ const BlogSingleData= [
     linkedin:Linkedin,
     facebook:Facebook,
     description: [
-          "In a world where digital experiences reign supreme, capturing and holding users' attention is the holy grail of design. Immersive UI (User Interface) design goes beyond mere functionality; it aims to create captivating experiences that draw users into a digital realm, leaving them feeling deeply engaged and connected. From virtual reality (VR) environments to interactive websites, immersive UI design has the power to transport users to new dimensions of interaction. Let's delve into the essence of immersive UI design and explore what sets it apart."
+          "In a world where digital experiences reign supreme, capturing and holding users attention is the holy grail of design. Immersive UI (User Interface) design goes beyond mere functionality; it aims to create captivating experiences that draw users into a digital realm, leaving them feeling deeply engaged and connected. From virtual reality (VR) environments to interactive websites, immersive UI design has the power to transport users to new dimensions of interaction. Let's delve into the essence of immersive UI design and explore what sets it apart."
     ],
     metaDescription:"In a world where digital experiences reign supreme, capturing and holding users attention is the holy grail of design.",
     mainArticle: [
@@ -219,7 +265,7 @@ const BlogSingleData= [
       {
         heading: "Immersive Environments",
         description: [
-          "Spatial UI/UX design excels in creating immersive environments that transport users to new realms of exploration and discovery. Whether it's navigating a virtual landscape in VR or overlaying digital information onto the physical world in AR, spatial design enables users to interact with digital content in a way that feels natural and intuitive. By leveraging 3D graphics, spatial sound, and responsive interactions, designers can create environments that captivate users' senses and foster a deep sense of immersion."
+          "Spatial UI/UX design excels in creating immersive environments that transport users to new realms of exploration and discovery. Whether it's navigating a virtual landscape in VR or overlaying digital information onto the physical world in AR, spatial design enables users to interact with digital content in a way that feels natural and intuitive. By leveraging 3D graphics, spatial sound, and responsive interactions, designers can create environments that captivate users senses and foster a deep sense of immersion."
         ]
       },
       {
@@ -238,7 +284,7 @@ const BlogSingleData= [
         heading: "Challenges and Opportunities",
         description: [
           "While spatial UI/UX design offers exciting possibilities for creating immersive experiences, it also presents unique challenges. Designing for spatial interfaces requires a deep understanding of spatial cognition, human perception, and interaction design principles. Additionally, optimizing performance and usability across various devices and platforms can be complex. However, with the right tools, techniques, and expertise, designers can overcome these challenges and unlock the full potential of spatial design in UI/UX.",
-          "Spatial UI/UX design represents a paradigm shift in how we interact with digital content, offering a new frontier of exploration and creativity. By embracing principles of depth, perspective, and spatial relationships, designers can create immersive environments that captivate users' imagination and redefine the way we experience technology. As spatial interfaces continue to evolve and mature, they promise to revolutionize the way we navigate and interact with the digital world, opening up endless possibilities for innovation and discovery."
+          "Spatial UI/UX design represents a paradigm shift in how we interact with digital content, offering a new frontier of exploration and creativity. By embracing principles of depth, perspective, and spatial relationships, designers can create immersive environments that captivate users imagination and redefine the way we experience technology. As spatial interfaces continue to evolve and mature, they promise to revolutionize the way we navigate and interact with the digital world, opening up endless possibilities for innovation and discovery."
         ]
       },
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BlogLanding from "@/components/blog-page/blog-landing/BlogLanding";
+import BlogLanding from "@components/blog-page/blog-landing/BlogLanding";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function Home() {

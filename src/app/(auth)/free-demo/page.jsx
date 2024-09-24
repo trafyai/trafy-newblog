@@ -1,5 +1,5 @@
 import React from 'react'
-import DemoEnquiry from '@/components/auth/free-demo/DemoEnquiry'
+import DemoEnquiry from '@components/common/auth/free-demo/DemoEnquiry'
 
 const page = () => {
   return (
