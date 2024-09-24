@@ -94,12 +94,15 @@ const Signup = () => {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
+            
             const userRef = ref(database, 'usersData/' + user.uid);
             await set(userRef, {
                 uid: user.uid,
                 email: user.email,
                 firstName: email.split('@')[0],
             });
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
 
             router.back();
         } catch (error) {
@@ -116,32 +119,19 @@ const Signup = () => {
             const provider = new GoogleAuthProvider();
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
-    
-            // Check if the user data already exists in the Firebase Realtime Database
-            const userRef = ref(database, 'usersData/' + user.uid);
-            const snapshot = await get(userRef);
             
-            if (snapshot.exists()) {
-                // User already exists, so fetch their data
-                const existingData = snapshot.val();
-                
-                // Load existing profile data (e.g., profile picture, phone number)
-                // You can set the data in your component state if needed
-                // setUserProfile(existingData); // Example: You might set this in a state
-    
-            } else {
-                // If the user doesn't exist, create a new entry
-                await set(userRef, {
-                    uid: user.uid,
-                    email: user.email,
-                    firstName: user.email.split('@')[0],
-                    // Add any default values like profile pic or phone number if needed
-                    profilePic: null,
-                    phoneNumber: null,
-                });
-            }
-    
-            // Redirect user after successful sign-in
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
+
+            const userRef = ref(database, 'usersData/' + user.uid);
+            await set(userRef, {
+                uid: user.uid,
+                email: user.email,
+                firstName: user.email.split('@')[0],
+            });
+
+
+            console.log('Google Sign-In successful and user data stored:', user);
             router.back();
         } catch (error) {
             if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {

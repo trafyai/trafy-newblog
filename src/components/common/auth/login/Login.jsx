@@ -84,14 +84,16 @@ const Login = () => {
             await set(userRef, {
                 uid: user.uid,
                 email: user.email,
-                firstName: user.email.split('@')[0],
+                firstName: existingData.firstName || user.email.split('@')[0],
             });
 
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
 
-            // router.push('/');
-            // router.back();
+            // Save merged data back to the database
+            await set(userRef, updatedData);
 
-            // router.push('/');
+            router.back();
 
         } catch (error) {
             if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
@@ -120,6 +122,11 @@ const Login = () => {
                 firstName: user.email.split('@')[0],
             });
 
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
+            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
+
+            // Save merged data back to the database
+            await set(userRef, updatedData);
 
             // router.back();
 
