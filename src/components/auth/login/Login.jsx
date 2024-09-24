@@ -27,9 +27,24 @@ const Login = () => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // Redirect if user is already logged in
-                router.push('/'); // Redirect to home or another page
+                router.push('/'); // Redirect to the main page after successful sign-in
             } else {
                 setLoading(false); // Set loading to false when done
+            }
+    
+            const token = new URLSearchParams(window.location.search).get('token');
+            console.log("Token from URL:", token);
+    
+            if (token) {
+                auth.signInWithCustomToken(token)
+                    .then((userCredential) => {
+                        console.log("Signed in with custom token", userCredential.user);
+                        // Redirect to the main page after successful sign-in
+                        router.push('/'); // Ensure this points to the main page you want to show
+                    })
+                    .catch((error) => {
+                        console.error("Error signing in with custom token", error);
+                    });
             }
         });
 
@@ -91,9 +106,6 @@ const Login = () => {
                 firstName: existingData.firstName || user.email.split('@')[0],
             };
 
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
-
             // Save merged data back to the database
             await set(userRef, updatedData);
 
@@ -130,9 +142,6 @@ const Login = () => {
                 email: user.email,
                 firstName: existingData.firstName || user.email.split('@')[0],
             };
-
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
 
             // Save merged data back to the database
             await set(userRef, updatedData);

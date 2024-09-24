@@ -2,7 +2,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getAuth, setPersistence, inMemoryPersistence } from 'firebase/auth';
 import { getDatabase } from 'firebase/database'; // Use getDatabase for Realtime Database
 import { getStorage } from 'firebase/storage';
 
@@ -24,5 +24,9 @@ const auth = getAuth(app);
 const database = getDatabase(app); // For Realtime Database
 const storage = getStorage(app);
 
-
+setPersistence(auth, inMemoryPersistence).then(() => {
+  console.log("Persistence set to inMemoryPersistence");
+}).catch((error) => {
+  console.error("Error setting persistence:", error);
+});
 export { auth, database, storage };
