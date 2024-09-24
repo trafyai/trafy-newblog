@@ -1,10 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { verifyPasswordResetCode, confirmPasswordReset } from 'firebase/auth';
-import { auth } from '@/firebase';
+import { auth } from '@firebase';
 import { useRouter } from 'next/navigation';
-import '@/styles/auth/ResetPassword.css'
+import { UserAuth } from '@context/AuthContext';  // Import the AuthContext
+import '@styles/common/auth/ResetPassword.css';
+
 const ResetPassword = () => {
+    const { user } = UserAuth();  // Access the user from AuthContext
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
@@ -13,14 +16,25 @@ const ResetPassword = () => {
     const [oobCode, setOobCode] = useState('');
 
     useEffect(() => {
+        // Redirect if the user is logged in
+        if (user) {
+            router.push('/');
+            return;
+        }
+
         const query = new URLSearchParams(window.location.search);
         const code = query.get('oobCode');
+
         if (code) {
             setOobCode(code);
         } else {
             setError('Invalid or missing reset code.');
+            // Redirect to login if the reset code is invalid or missing
+            setTimeout(() => {
+                router.push('/login');
+            }, 3000);
         }
-    }, []);
+    }, [user, router]);
 
     const handleResetPassword = async (e) => {
         e.preventDefault();
@@ -28,7 +42,7 @@ const ResetPassword = () => {
         setMessage('');
 
         if (newPassword !== confirmPassword) {
-            setError('Passwords do not match');
+            setError('Passwords do not match.');
             return;
         }
 

@@ -204,21 +204,14 @@
         gap: 2rem;
     }
     .blog-landing-card-inner{
-        flex-direction: row;
         gap:1rem;
 
-    }
-    .blog-landing-card-image{
-        width: 40%;
-        align-items: flex-start;
     }
     .blog-landing-card-image img{
         width: 100%;
         height: max-content;
-        border-radius: 8px;
     }
     .blog-landing-card-content{
-        width: 60%;
     }
     .blog-landing-card-author{
         display: none;
@@ -230,17 +223,13 @@
     }
     .blog-landing-container{
         width: 90%;
-        gap:2rem;
+        gap:2.5rem;
     }
     .blog-landing-content{
         gap:1.5rem;
     }
-    .blog-landing-card-content {
-        width: 70%;
-    }
-    .blog-landing-card-image{
-        padding-top: 6px;
-        width: 30%;
+    .blog-landing-card-inner {
+        gap: 0.5rem;
     }
     .blog-landing-card-heading h1{
         font-size: 17px;

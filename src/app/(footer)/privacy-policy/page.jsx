@@ -1,5 +1,5 @@
 import React from 'react'
-import Privacy from '@/components/footer/PrivacyPolicy';
+import PrivacyPolicy from '@components/footer/compliance/PrivacyPolicy';
 import Head from 'next/head';
 const page = () => {
   return (
@@ -7,7 +7,7 @@ const page = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-        <Privacy/>
+        <PrivacyPolicy/>
     </div>
   )
 }

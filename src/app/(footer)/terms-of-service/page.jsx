@@ -1,5 +1,5 @@
 import React from 'react';
-import Terms from '@/components/footer/TermsOfService'
+import TermsOfService from '@components/footer/compliance/TermsOfService';
 import Head from 'next/head';
 const terms = () => {
   return (
@@ -7,7 +7,7 @@ const terms = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-        <Terms/>
+        <TermsOfService/>
     </div>
   )
 }

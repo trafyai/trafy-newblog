@@ -1,14 +1,25 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '@/firebase';
-import Link from 'next/link';
-import '@/styles/auth/ForgotPassword.css'
+import { auth } from '@firebase';
+import { useRouter } from 'next/navigation';
+import { UserAuth } from '@context/AuthContext';  // Import the AuthContext
+import '@styles/common/auth/ForgotPassword.css';
 
 const ForgotPassword = () => {
+    const { user } = UserAuth();  // Access the user from AuthContext
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const router = useRouter();
+
+    useEffect(() => {
+        // Redirect if the user is logged in
+        if (user) {
+            router.push('/');
+            return;
+        }
+    }, [user, router]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

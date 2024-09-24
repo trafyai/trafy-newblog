@@ -1,15 +1,16 @@
 'use client';
-import React, { useState, useEffect } from "react";
-import '@/styles/auth/login.css';
+import React, { useState , useEffect} from "react";
+import '@styles/common/auth/login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { ref, set, get } from 'firebase/database';
-import { auth, database } from '@/firebase'; // Adjust this path based on your actual file structure
+import { ref, set } from 'firebase/database';
+import { auth, database } from '@firebase'; // Adjust this path based on your actual file structure
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -27,9 +28,28 @@ const Login = () => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // Redirect if user is already logged in
-                router.push('/'); // Redirect to home or another page
+<<<<<<< HEAD:src/components/auth/login/Login.jsx
+                router.push('/'); // Redirect to the main page after successful sign-in
+=======
+                router.back(); // Redirect to home or another page
+>>>>>>> cfc790c81cb071cd81d3e0ea0a64303fad64c9b2:src/components/common/auth/login/Login.jsx
             } else {
                 setLoading(false); // Set loading to false when done
+            }
+    
+            const token = new URLSearchParams(window.location.search).get('token');
+            console.log("Token from URL:", token);
+    
+            if (token) {
+                auth.signInWithCustomToken(token)
+                    .then((userCredential) => {
+                        console.log("Signed in with custom token", userCredential.user);
+                        // Redirect to the main page after successful sign-in
+                        router.push('/'); // Ensure this points to the main page you want to show
+                    })
+                    .catch((error) => {
+                        console.error("Error signing in with custom token", error);
+                    });
             }
         });
 
@@ -78,18 +98,13 @@ const Login = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
-            // Fetch existing user data
+            // Store user data in Firebase Realtime Database
             const userRef = ref(database, 'usersData/' + user.uid);
-            const snapshot = await get(userRef);
-            let existingData = snapshot.exists() ? snapshot.val() : {};
-
-            // Merge existing data with new data
-            const updatedData = {
-                ...existingData,
+            await set(userRef, {
                 uid: user.uid,
                 email: user.email,
                 firstName: existingData.firstName || user.email.split('@')[0],
-            };
+            });
 
             // Save merged data back to the database
             await set(userRef, updatedData);
@@ -100,7 +115,7 @@ const Login = () => {
             if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
                 setGeneralError("Email or password is incorrect. Please try again");
             } else {
-                setGeneralError("An error occurred. Please try again.");
+                setGeneralError("Email or password is incorrect. Please try again.");
             }
         }
     };
@@ -115,23 +130,18 @@ const Login = () => {
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
 
-            // Fetch existing user data
+            // Store user data in Firebase Realtime Database
             const userRef = ref(database, 'usersData/' + user.uid);
-            const snapshot = await get(userRef);
-            let existingData = snapshot.exists() ? snapshot.val() : {};
-
-            // Merge existing data with new data
-            const updatedData = {
-                ...existingData,
+            await set(userRef, {
                 uid: user.uid,
                 email: user.email,
-                firstName: existingData.firstName || user.email.split('@')[0],
-            };
+                firstName: user.email.split('@')[0],
+            });
 
             // Save merged data back to the database
             await set(userRef, updatedData);
 
-            router.back();
+            // router.back();
 
         } catch (err) {
             if (err.code === 'auth/cancelled-popup-request') {
@@ -141,6 +151,7 @@ const Login = () => {
             }
         }
     };
+
 
     return (
         <div className="login">

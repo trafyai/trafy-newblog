@@ -1,6 +1,6 @@
 import React from "react";
-import '@/styles/blog/BlogLanding.css';
-import BlogSingleData from "@/api/blog/BlogSingleData";
+import '@styles/blog/BlogLanding.css';
+import BlogSingleData from "@api/blog/BlogSingleData";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,11 +42,24 @@ export default function BlogLanding() {
                                         <div className="blog-landing-card-heading">
                                             <h1>{item.title}</h1>
                                         </div>
-                                        <div className="blog-landing-card-description">
+                                        {/* <div className="blog-landing-card-description">
                                             <p>
-                                                {String(item.description).slice(0, 130)}...
+                                                {String(item.description).slice(0, 130)}
+                                            </p>
+                                        </div> */}
+                                      <div className="blog-landing-card-description">
+                                            <p>
+                                                {String(item.description)
+                                                    .split(' ') // Split the description into an array of words
+                                                    .slice(0, 20) // Change 20 to the number of words you want to display
+                                                    .join(' ') // Join the sliced array back into a string
+                                                    
+                                                }
                                             </p>
                                         </div>
+
+          
+
                                         <div className="blog-landing-card-author">
                                             <p>{item.author}</p>
                                             <p>{item.date}</p>

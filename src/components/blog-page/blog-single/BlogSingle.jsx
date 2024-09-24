@@ -1,13 +1,13 @@
 // 'use client'
 // import React, { useRef, useState } from "react";
 // import '@styles/blog/BlogSingle.css';
-// import Twitter from '@public/Images/socials/twitter.png';
-// import Linkedin from '@public/Images/socials/linkedin.png';
-// import Facebook from '@public/Images/socials/facebook.png';
-// import Twitter_w from '@public/Images/socials-white/twitter-w.png';
-// import Linkedin_w from '@public/Images/socials-white/linkedin-w.png';
-// import Facebook_w from '@public/Images/socials-white/facebook-w.png';
-// import SS from '@public/Images/blog/ss.jpeg';
+// import Twitter from '@public/assets/Images/common/common/socials/twitter.png';
+// import Linkedin from '@public/assets/Images/common/common/socials/linkedin.png';
+// import Facebook from '@public/assets/Images/common/common/socials/facebook.png';
+// import Twitter_w from '@public/assets/Images/common/common/socials-white/twitter-w.png';
+// import Linkedin_w from '@public/assets/Images/common/common/socials-white/linkedin-w.png';
+// import Facebook_w from '@public/assets/Images/common/common/socials-white/facebook-w.png';
+// import SS from '@public/assets/Images/common/common/blog/ss.jpeg';
 // import Blogother-blogsData from "@api/blog/Blogother-blogsData";
 // import Link from "next/link";
 // import Image from "next/image";
@@ -288,11 +288,11 @@
 
 'use client'
 import React, { useRef, useState } from "react";
-import '@/styles/blog/BlogSingle.css';
-import Twitter from '@/public/Images/socials/twitter.png';
-import Linkedin from '@/public/Images/socials/linkedin.png';
-import Facebook from '@/public/Images/socials/facebook.png';
-import BlogSingleData from "@/api/blog/BlogSingleData";
+import '@styles/blog/BlogSingle.css';
+import Twitter from '@public/assets/Images/common/common/socials/twitter.png';
+import Linkedin from '@public/assets/Images/common/common/socials/linkedin.png';
+import Facebook from '@public/assets/Images/common/common/socials/facebook.png';
+import BlogSingleData from "@api/blog/BlogSingleData";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -384,12 +384,6 @@ export default function BlogPage(props) {
     }
   };
 
-  // const shareToLinkedIn = () => {
-  //   const postTitle = encodeURIComponent(props.title);
-  //   const postUrl = encodeURIComponent(currentPageUrl);
-  //   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}`, '_blank', 'width=600,height=400');
-  // };
-
   const shareToLinkedIn = () => {
     const postUrl = encodeURIComponent(currentPageUrl);
     const postTitle = encodeURIComponent(props.title);
@@ -400,12 +394,7 @@ export default function BlogPage(props) {
     window.open(linkedinUrl, '_blank', 'width=600,height=400');
   };
 
-  
-  // const shareToTwitter = () => {
-  //   const postTitle = encodeURIComponent(props.title);
-  //   const postUrl = encodeURIComponent(currentPageUrl);
-  //   window.open(`https://twitter.com/intent/tweet?text=${postTitle}&url=${postUrl}`, '_blank', 'width=600,height=400');
-  // };
+ 
   const shareToTwitter = () => {
     const postUrl = encodeURIComponent(currentPageUrl);
     const postText = encodeURIComponent(`${props.title} - ${props.metaDescription}`);
@@ -415,12 +404,6 @@ export default function BlogPage(props) {
     window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
   
-
-  // const shareToFacebook = () => {
-  //   const postTitle = encodeURIComponent(props.title);
-  //   const postUrl = encodeURIComponent(currentPageUrl);
-  //   window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
-  // };
   const shareToFacebook = () => {
     const postUrl = encodeURIComponent(currentPageUrl);
     const postTitle = encodeURIComponent(props.title); // Not always necessary
@@ -462,9 +445,9 @@ export default function BlogPage(props) {
           </section>
 
           <section className="blog-page-blog-image">
-            <Image src={props.image}/>
+            <Image className="blog-page-img" src={props.image}/>
             <div className="blog-page-article-socials">
-                  {/* Share: */}
+                  Share:
                   <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
                   <Image src={Facebook} alt="" onClick={shareToFacebook} className="blog-social-b" width="28" height="28" />
                   <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" />
@@ -501,8 +484,6 @@ export default function BlogPage(props) {
                       </div>
                     ))}
 
-                   
-
                   </div>
                     
 
@@ -517,6 +498,13 @@ export default function BlogPage(props) {
                     ))}
           </section>
 
+          {/* Newsletter Section */}
+          <section className="blog-newsletter">
+            <div className="blog-newsletter-container">
+              {renderFormOrMessage()}
+            </div>
+          </section>
+
           {/* Other Blogs Section */}
           <section className="blog-other-blogs">
               <div className="blog-other-blog-heading">
@@ -526,31 +514,26 @@ export default function BlogPage(props) {
               <div className="blog-other-blogs-content">
                 {BlogSingleData.filter(item => item.id !== props.id).slice(0, 3).map((item, index) => (
 
-                      <div className="blog-other-blogs-card" key={index}>
+                    <div className="blog-other-blogs-card" key={index}>
                             
                       <Link href={`/${item.id}`}  className="blog-other-blogs-card-inner">
                       <div className="blog-other-blogs-card-image" >
                           <Image src={item.image} alt={item.alt} height="max-content"/>
                       </div>
                       <div className="blog-other-blogs-card-content">
-                      {/* <div className="blog-other-blogs-card-category">
-                          <h1>{item.category}</h1>
-                          <p>{item.read}</p>
-                      </div> */}
                       <div className="blog-other-blogs-card-heading">
                           <h1>{item.title}</h1>
                       </div>
                       <div className="blog-other-blogs-card-description">
-                      <p>
-                      {/* {item.description} */}
+                        <p>
+                            {String(item.description)
+                                .split(' ') // Split the description into an array of words
+                                .slice(0, 20) // Change 20 to the number of words you want to display
+                                .join(' ') // Join the sliced array back into a string
+                            }
+                        </p>
+                    </div>
 
-                      {String(item.description).slice(0, 80)}...
-                      </p>
-                      </div>
-                      {/* <div className="blog-other-blogs-card-author">
-                          <p>{item.author}</p>
-                          <p>{item.date}</p>
-                      </div> */}
                       </div>
                       </Link>
                   </div>
@@ -559,12 +542,7 @@ export default function BlogPage(props) {
               </div>
           </section>
 
-          {/* Newsletter Section */}
-          <section className="blog-newsletter">
-            <div className="blog-newsletter-container">
-              {renderFormOrMessage()}
-            </div>
-          </section>
+         
         </div>
       </div>
     </main>

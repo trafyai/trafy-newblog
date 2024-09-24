@@ -1,5 +1,5 @@
 import React from 'react'
-import Cookie from '@/components/footer/CookiePolicy'
+import CookiePolicy from '@components/footer/compliance/CookiePolicy';
 import Head from 'next/head';
 const page = () => {
   return (
@@ -7,7 +7,7 @@ const page = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-        <Cookie/>
+        <CookiePolicy/>
     </div>
   )
 }

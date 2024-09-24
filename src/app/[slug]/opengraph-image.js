@@ -30,7 +30,7 @@
 
 
 import { ImageResponse } from 'next/og'
-import BlogSingleData from '@/api/blog/BlogSingleData';
+import BlogSingleData from '@api/blog/BlogSingleData';
 
 export const runtime = 'edge'
  

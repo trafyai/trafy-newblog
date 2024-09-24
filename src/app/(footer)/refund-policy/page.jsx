@@ -1,5 +1,5 @@
 import React from 'react'
-import Refund from '@/components/footer/RefundPolicy';
+import RefundPolicy from '@components/footer/compliance/RefundPolicy';
 import Head from 'next/head';
 const page = () => {
   return (
@@ -7,7 +7,7 @@ const page = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-        <Refund/>
+        <RefundPolicy/>
     </div>
   )
 }
