@@ -28,7 +28,7 @@ export default function BlogLanding() {
                     ))}
 
                     <div className="blog-landing-content">
-                        {BlogSingleData.slice(1, 4).map((item) => (
+                        {BlogSingleData.slice(1, 5).map((item) => (
                             <div className="blog-landing-card" key={item.id}>
                                 <Link href={`/${item.id}`} className="blog-landing-card-inner">
                                     <div className="blog-landing-card-image">

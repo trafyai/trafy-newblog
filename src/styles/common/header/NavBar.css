@@ -255,6 +255,9 @@
     } */
 }
 @media only screen and (max-width: 400px) {
+  .navbar-container{
+    width: 90%;
+  }
   /* .menu-mobile-contents{
         width: 103vw;
         top: 37px;
