@@ -20,29 +20,29 @@ const Header = () => {
   const dropdownRef = useRef(null); // New ref for dropdown
   const router = useRouter(); 
 
-  useEffect(() => {
-    const fetchSessionCookie = async () => {
-        try {
-            const response = await fetch('http://localhost:5000/api/getSessionCookie', {
-                method: 'GET',
-                credentials: 'include', // Important to send cookies
-            });
+//   useEffect(() => {
+//     const fetchSessionCookie = async () => {
+//         try {
+//             const response = await fetch('http://localhost:5000/api/getSessionCookie', {
+//                 method: 'GET',
+//                 credentials: 'include', // Important to send cookies
+//             });
 
-            if (response.ok) {
-                const data = await response.json();
-                if(data.success == true){
-                  setDataOpen(data);
-                }
+//             if (response.ok) {
+//                 const data = await response.json();
+//                 if(data.success == true){
+//                   setDataOpen(data);
+//                 }
               
-            }
-        } catch (error) {
-            // Optionally log other types of errors
-            console.error('Error fetching session cookie:', error);
-        }
-    };
+//             }
+//         } catch (error) {
+//             // Optionally log other types of errors
+//             console.error('Error fetching session cookie:', error);
+//         }
+//     };
 
-    fetchSessionCookie();
-}, []);
+//     fetchSessionCookie();
+// }, []);
 
 
   
@@ -164,9 +164,9 @@ const Header = () => {
           <div className="menu-right-d">
             { !dataOpen ? (
               <Link
-                href="/signup"
+                href="https://trafy.ai/login"
                 className="menu-signup"
-                onClick={() => handleNavigation("/signup")}
+                onClick={() => handleNavigation("https://trafy.ai/login")}
               >
                 Get Started
               </Link>
@@ -295,9 +295,9 @@ const Header = () => {
               <div className="menu-right">
                 {!dataOpen  ? (
                   <Link
-                    href="/signup"
+                    href="https://trafy.ai/login"
                     className="menu-signup"
-                    onClick={() => handleNavigation("/signup")}
+                    onClick={() => handleNavigation("https://trafy.ai/login")}
                   >
                     Get Started
                   </Link>

@@ -10,7 +10,7 @@ export default function GlobalError({ error, reset }) {
             <div className="error-page-container">
                 <p className="error-404">404 </p>
                 <p className="error-404-description">Page Not Found</p>
-                <p className="page-doesnt-exist">The page you are looking for doesn't exist or has been moved.</p>
+                <p className="page-doesnt-exist">The page you are looking for doesn&apos;t exist or has been moved.</p>
 
                 {/* Use href in Link component for Next.js */}
                 <Link href="/">
