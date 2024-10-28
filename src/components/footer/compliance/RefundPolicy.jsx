@@ -12,10 +12,10 @@ function RefundPolicy() {
       <h1>
         Refund Policy
       </h1>
-      <p>All our clients are very important to us, that’s why <strong>DMERZ TECHNOLOGY PRIVATE LIMITED</strong>, registered address No 157, G1, 4/608, V.O.C. Street, Perungudi, OMR, Chennai - 600041. has created the following Refund Policy to let You know how we handle the refunds for the goods ordered and bought on our website <a href="https://trafyai.com/">https://trafyai.com/</a></p>
+      <p>All our clients are very important to us, that’s why <strong>DMERZ TECHNOLOGY PRIVATE LIMITED</strong>, registered address No 157, G1, 4/608, V.O.C. Street, Perungudi, OMR, Chennai - 600041. has created the following Refund Policy to let You know how we handle the refunds for the goods ordered and bought on our website <a href="https://trafy.ai/">https://trafy.ai/</a></p>
       <p>The terms “You,” “Your,” and “Yours” refer to the entity/ person/ organization using our Website. When this Policy mentions “we”, “us,”, and “our” it refers to the Company and its subsidiaries or /and affiliates. The term “goods” refers to any product or item bought on our Website by You.</p>
       <p>This Refund Policy is governed by our Terms of Services.</p>
-      <p>For any questions regarding this Refund Policy or any requests regarding the refunds and returns, please contact us by email <strong> support@trafyai.com</strong>, phone at +91 99418 34334, or other contacts provided below.</p>
+      <p>For any questions regarding this Refund Policy or any requests regarding the refunds and returns, please contact us by email <strong> support@trafy.ai</strong>, phone at +91 99418 34334, or other contacts provided below.</p>
       <p>You have the right, without giving a reason, to return the goods within 14 days, if it has not been used, damaged or its appearance has not substantially changed, that is, the appearance of the product or its packaging has been made only such alterations as were necessary to inspect the goods received.</p>
       <p>The right to withdraw from a distance contract within 14 days without giving a reason does not apply to legal persons (e.g. companies, entrepreneurs).
     </p>
@@ -50,7 +50,7 @@ function RefundPolicy() {
       <h4>Defective Goods</h4>
 
       <p>In certain cases, such as defective, damaged, or wrong goods, you may be required to provide evidence of the issue, such as a photo or video, or to return the item to receive a refund.
-        You must contact our company at support@trafyai.com within 14 days upon purchase and provide detailed information, such as:
+        You must contact our company at support@trafy.ai within 14 days upon purchase and provide detailed information, such as:
         </p>
 
       <ul>

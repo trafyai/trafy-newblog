@@ -21,9 +21,9 @@ function TermsOfService() {
 
   <h4>1. OVERVIEW</h4>
 
-  <p>This Terms of Service Agreement (“Agreement”) is entered into by and between <strong>DMERZ TECHNOLOGY PRIVATE LIMITED</strong>, registered address No 157, G1, 4/608, V.O.C. Street, Perungudi, OMR, Chennai - 600041. and you, and is made effective as of the date of your use of this website <a href="https://trafyai.com/">https://trafyai.com/</a> or the date of electronic acceptance.</p>
+  <p>This Terms of Service Agreement (“Agreement”) is entered into by and between <strong>DMERZ TECHNOLOGY PRIVATE LIMITED</strong>, registered address No 157, G1, 4/608, V.O.C. Street, Perungudi, OMR, Chennai - 600041. and you, and is made effective as of the date of your use of this website <a href="https://trafy.ai/">https://trafy.ai/</a> or the date of electronic acceptance.</p>
 
-  <p>This Agreement sets forth the general terms and conditions of your use of the   <a href="https://trafyai.com/">https://trafyai.com/</a> as well as the products and/or services purchased or accessed through this Site (the “Services”).
+  <p>This Agreement sets forth the general terms and conditions of your use of the   <a href="https://trafy.ai/">https://trafy.ai/</a> as well as the products and/or services purchased or accessed through this Site (the “Services”).
   </p>
 
   <p>The company may, in its sole and absolute discretion, change or modify this Agreement, and any policies or agreements which are incorporated herein, at any time, and such changes or modifications shall be effective immediately upon posting to this Site. Your use of this Site or the Services after such changes or modifications have been made shall constitute your acceptance of this Agreement as last revised.
@@ -186,7 +186,7 @@ function TermsOfService() {
     <p><strong>DMERZ TECHNOLOGY PRIVATE LIMITED</strong>
     </p>
 
-    <p id="link">info@trafyai.com</p>
+    <p id="link">info@trafy.ai</p>
     </div>
 
     </div>
