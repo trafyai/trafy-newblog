@@ -304,9 +304,9 @@ const BlogDashboard = ({ mainArticle, handleScrollToArticle, handleScrollToSubAr
         {shareOpen &&
           <div className='blog-mobile-dashboard-share'>
             <div className='blog-mobile-dashboard-share-container'>
-              <Image src={Twitter} />
-              <Image src={Facebook} />
-              <Image src={Linkedin} />
+              <Image src={Twitter} onClick={shareToTwitter} />
+              <Image src={Facebook} onClick={shareToFacebook}/>
+              <Image src={Linkedin} onClick={shareToLinkedIn}/>
             </div>
           </div>
         }
