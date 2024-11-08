@@ -32,7 +32,9 @@ const Header = () => {
                 const data = await response.json();
                 if(data.success == true){
                   setDataOpen(data);
+
                 }
+
               
             }
         } catch (error) {
@@ -45,9 +47,10 @@ const Header = () => {
 }, []);
 
 
+
+
   
 
-  // console.log("Session Cookie Use state",sessionOpen.sessionCookie);
 
   useEffect(() => {
     const handlePopState = () => {
