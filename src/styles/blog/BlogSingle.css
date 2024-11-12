@@ -124,13 +124,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .blog-mobile-dashboard-share-heading{
     width: max-content;
     display: flex;
     justify-content: center;
-    height: 100%;
-    padding: 8px 10px;
+    align-items: center;
+    height: 40px;
+    padding: 8px 8px;
     border:1px solid var(--box-border);
     border-radius: 4px;
 }
@@ -145,6 +147,7 @@
     font-weight: 400;
     text-align: center;
     line-height: 140%;
+    height: 40px;
 }
 .blog-mobile-dashboard-heading h3:hover{
     background-color: var(--trafy-white);
@@ -211,10 +214,7 @@
     .blog-mobile-dashboard-heading h3{
         font-size: 14px;
     }
-    .blog-mobile-dashboard-share-container img {
-        width: 32px;
-        height: 32px;
-    }
+
 }
 /* -------------------------------------------------Blog Hero---------------------------------------------------- */
 

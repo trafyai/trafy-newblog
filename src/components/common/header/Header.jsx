@@ -143,9 +143,9 @@ const Header = () => {
         <div className="menu-lg">
           <div className="menu-left">
             <Link
-              href="https://trafyai.com/courses/"
+              href="https://trafy.ai/courses/"
               className="menu-pathway"
-              onClick={() => handleNavigation("https://trafyai.com/courses/")}
+              onClick={() => handleNavigation("https://trafy.ai/courses/")}
             >
               Pathway
             </Link>
@@ -157,9 +157,9 @@ const Header = () => {
               Masterclass
             </Link>
             <Link
-              href="https://blog.trafyai.com"
+              href="https://blog.trafy.ai"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafyai.com")}
+              onClick={() => handleNavigation("https://blog.trafy.ai")}
             >
               Resources
             </Link>
@@ -193,14 +193,14 @@ const Header = () => {
                 {hover && (
                   <div className="menu-user-dropdown">
                     <Link
-                      href="https://trafyai.com/account-settings"
-                      onClick={() => handleNavigation("https://trafyai.com/account-settings")}
+                      href="https://trafy.ai/account-settings"
+                      onClick={() => handleNavigation("https://trafy.ai/account-settings")}
                     >
                       <p>Profile</p>
                     </Link>
                     <Link
-                      href="https://trafyai.com/account-security"
-                      onClick={() => handleNavigation("https://trafyai.com/account-security")}
+                      href="https://trafy.ai/account-security"
+                      onClick={() => handleNavigation("https://trafy.ai/account-security")}
                     >
                       <p>Security</p>
                     </Link>
@@ -214,9 +214,9 @@ const Header = () => {
 
         <div className="menu-mobile">
           <Link
-            href="https://trafyai.com/courses/"
+            href="https://trafy.ai/courses/"
             className="menu-pathway"
-            onClick={() => handleNavigation("https://trafyai.com/courses")}
+            onClick={() => handleNavigation("https://trafy.ai/courses")}
             style={{ paddingRight: "16px" }}
           >
             Pathway
@@ -245,9 +245,9 @@ const Header = () => {
                   Masterclass
                 </Link>
                 <Link
-                  href="https://blog.trafyai.com"
+                  href="https://blog.trafy.ai"
                   className="menu-resources"
-                  onClick={() => handleNavigation("https://blog.trafyai.com")}
+                  onClick={() => handleNavigation("https://blog.trafy.ai")}
                 >
                   Resources
                 </Link>
@@ -263,18 +263,18 @@ const Header = () => {
                 )}
                 {dataOpen && (
                   <Link
-                    href="https://trafyai.com//-settings"
+                    href="https://trafy.ai//-settings"
                     className="menu-account-settings"
-                    onClick={() => handleNavigation("https://trafyai.com/account-settings")}
+                    onClick={() => handleNavigation("https://trafy.ai/account-settings")}
                   >
                     Account Settings
                   </Link>
                 )}
                 {dataOpen  && (
                   <Link
-                    href="https://trafyai.com/account-security"
+                    href="https://trafy.ai/account-security"
                     className="menu-account-security"
-                    onClick={() => handleNavigation("https://trafyai.com/account-security")}
+                    onClick={() => handleNavigation("https://trafy.ai/account-security")}
                   >
                     Security
                   </Link>
@@ -306,8 +306,8 @@ const Header = () => {
                   </Link>
                 ) : (
                   <div className="menu-profile">
-                    <Link href="https://trafyai.com/account/-settings"
-                      onClick={() => handleNavigation("https://trafyai.com/account-settings")}
+                    <Link href="https://trafy.ai/account/-settings"
+                      onClick={() => handleNavigation("https://trafy.ai/account-settings")}
 >
                       <div className=""
                         style={{
