@@ -22,7 +22,7 @@ const BlogHero = (props) => {
                 <p>By <span style={{ fontWeight: "700" }}>{props.author} </span></p>
                 <span style={{ color: "#d1d1d1" }}>|</span>
                 <p>{props.date}</p>
-                <p>{props.read}</p>
+                <p style={{paddingLeft:"0.5rem"}}>{props.read}</p>
             </div>
 
        </section>
