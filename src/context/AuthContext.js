@@ -15,6 +15,25 @@ export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
  
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    //         if (currentUser) {
+    //             const userRef = dbRef(database, 'usersData/' + currentUser.uid);
+    //             const snapshot = await get(userRef);
+    //             if (snapshot.exists()) {
+    //                 const data = snapshot.val();
+    //                 setUser({ ...currentUser, profilePicURL: data.profilePicURL });
+    //             } else {
+    //                 setUser(currentUser);
+    //             }
+    //         } else {
+    //             setUser(null);
+    //         }
+    //         setLoading(false);
+    //     });
+
+    //     return () => unsubscribe();
+    // }, 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
             if (currentUser) {
@@ -33,7 +52,8 @@ export const AuthContextProvider = ({ children }) => {
         });
 
         return () => unsubscribe();
-    }, []);
+    },
+    []);
     const googleSignIn = async () => {
         const provider = new GoogleAuthProvider();
         const userCredential = await signInWithPopup(auth, provider);
