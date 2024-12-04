@@ -29,6 +29,13 @@ const BlogMetaData = [
         title: "Digital Dimensions and Exploring Spatial Design in UI/UX",
         metaDescription:"In the ever-evolving landscape of digital design, spatial design has emerged as a groundbreaking approach to creating immersive and intuitive user experiences.",
     },
+    {
+        id: "Email-Marketing-Introduction-and-Why-It-Remains-a-Powerful-Tool",
+        metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/Email%20Maketing.png?alt=media&token=0c98e73b-73f1-41ee-b5cf-e554903c8078",
+        title: "Email Marketing: Introduction and Why It Remains a Powerful Tool",
+        metaDescription:"Email marketing remains a vital part of online marketing strategies for businesses of all sizes. This article explores the basics of email marketing and explains why it continues to be a powerful tool in the digital landscape.",
+     
+    }
 ]
 
 export default BlogMetaData;
