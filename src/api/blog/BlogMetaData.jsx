@@ -33,7 +33,7 @@ const BlogMetaData = [
         id: "Email-Marketing-Why-It-Remains-a-Powerful-Tool",
         metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/Email%20Maketing.png?alt=media&token=0c98e73b-73f1-41ee-b5cf-e554903c8078",
         title: "Email Marketing: Why It Remains a Powerful Tool",
-        metaDescription:"Email marketing is the process of delivering customised emails to promote goods, services, or brand interaction, making it a key element of digital marketing.",
+        metaDescription:"Email marketing is still a key component of online marketing plans for companies of all sizes. This blog discusses the basics of email marketing and explains why it's still a powerful tool in the current digital environment.",
      
     }
 ]
