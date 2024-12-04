@@ -104,7 +104,7 @@ const BlogDashboard = ({ mainArticle, handleScrollToArticle, handleScrollToSubAr
               style={{
                 cursor: 'pointer',
                 color: activeIndex.main === index ? 'var(--p-black)' : 'rgb(94 94 94)',
-                fontWeight: activeIndex.main === index ? '500' : 'normal'
+                fontWeight: activeIndex.main === index ? '500' : '400'
               }}
             >
               {item.heading}
@@ -138,9 +138,9 @@ const BlogDashboard = ({ mainArticle, handleScrollToArticle, handleScrollToSubAr
         {shareOpen &&
           <div className='blog-mobile-dashboard-share'>
             <div className='blog-mobile-dashboard-share-container'>
-              <Image src={Twitter} onClick={shareToTwitter} />
-              <Image src={Facebook} onClick={shareToFacebook}/>
-              <Image src={Linkedin} onClick={shareToLinkedIn}/>
+              <Image src={Twitter} onClick={shareToTwitter} alt='X'/>
+              <Image src={Facebook} onClick={shareToFacebook} alt='Facebook'/>
+              <Image src={Linkedin} onClick={shareToLinkedIn} alt='Linkedin'/>
             </div>
           </div>
         }
@@ -164,8 +164,7 @@ const BlogDashboard = ({ mainArticle, handleScrollToArticle, handleScrollToSubAr
               style={{
                 cursor: 'pointer'
               }}>
-            <Image src={share}
-            />
+            <Image src={share} alt='share'/>
           </div>
         </div>
       </div>

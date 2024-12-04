@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import '@styles/globals.css';
 import Header from "@components/common/header/Header";
 import Footer from "@components/common/footer/Footer";
-import { AuthContextProvider } from "@context/AuthContext";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script';
 
@@ -42,11 +41,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
 
       <body className={inter.className}>
-        <AuthContextProvider>
             <Header/>
             {children}
             <Footer/>
-        </AuthContextProvider>
         <GoogleAnalytics gaId=" G-329K7NDLKZ" />
 
         </body>

@@ -89,13 +89,11 @@ const BlogNewsletter = () => {
   };
 
   return (
-    <div>
            <section className="blog-newsletter">
             <div className="blog-newsletter-container">
               {renderFormOrMessage()}
             </div>
           </section>
-    </div>
   )
 }
 

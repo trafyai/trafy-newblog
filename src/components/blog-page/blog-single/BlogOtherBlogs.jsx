@@ -18,7 +18,7 @@ const BlogOtherBlogs = (props) => {
                             
                       <Link href={`/${item.id}`}  className="blog-other-blogs-card-inner">
                       <div className="blog-other-blogs-card-image" >
-                          <Image src={item.image} alt={item.alt} height="max-content"/>
+                          <Image src={item.image} alt="blog image" height="max-content"/>
                       </div>
                       <div className="blog-other-blogs-card-content">
                       <div className="blog-other-blogs-card-heading">

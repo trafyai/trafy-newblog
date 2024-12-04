@@ -1,32 +1,22 @@
-// src/firebase.js
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAuth, setPersistence, inMemoryPersistence } from 'firebase/auth';
-import { getDatabase } from 'firebase/database'; // Use getDatabase for Realtime Database
-import { getStorage } from 'firebase/storage';
+// Import required functions from the Firebase SDK
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCqL7lnooyjmNGAOB5nc4yZcb6FKu8e-2A",
-  authDomain: "trafyai-loginsignup.firebaseapp.com",
-  projectId: "trafyai-loginsignup",
-  storageBucket: "trafyai-loginsignup.appspot.com",
-  messagingSenderId: "344792634329",
-  appId: "1:344792634329:web:d343ac2461dd2a731dffc8"
+  apiKey: "AIzaSyBXHcoGhI6oOX_63RIcWerh5oGFjdoP-w0",
+  authDomain: "apitesting-6694b.firebaseapp.com",
+  projectId: "apitesting-6694b",
+  storageBucket: "apitesting-6694b.appspot.com",
+  messagingSenderId: "387990035960",
+  appId: "1:387990035960:web:c1ba24cb745c1874894a0d",
+  measurementId: "G-82B6DP33G6"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase services
-const auth = getAuth(app);
-const database = getDatabase(app); // For Realtime Database
-const storage = getStorage(app);
+// Get Firestore instance
+const db = getFirestore(app);
 
-setPersistence(auth, inMemoryPersistence).then(() => {
-  console.log("Persistence set to inMemoryPersistence");
-}).catch((error) => {
-  console.error("Error setting persistence:", error);
-});
-export { auth, database, storage };
+export default db;

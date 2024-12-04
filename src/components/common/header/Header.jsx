@@ -20,37 +20,49 @@ const Header = () => {
   const dropdownRef = useRef(null); // New ref for dropdown
   const router = useRouter(); 
 
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    const fetchSessionCookie = async () => {
-        try {
-            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/getSessionCookie', {
-                method: 'GET',
-                credentials: 'include', // Important to send cookies
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                if(data.success == true){
-                  setDataOpen(data);
-
-                }
-
-              
-            }
-        } catch (error) {
-            // Optionally log other types of errors
-            console.error('Error fetching session cookie:', error);
-        }
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
-    fetchSessionCookie();
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
+//   useEffect(() => {
+//     const fetchSessionCookie = async () => {
+//         try {
+//             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/getSessionCookie', {
+//                 method: 'GET',
+//                 credentials: 'include', // Important to send cookies
+//             });
 
+//             if (response.ok) {
+//                 const data = await response.json();
+//                 if(data.success == true){
+//                   setDataOpen(data);
 
+//                 }
 
-  
+              
+//             }
+//         } catch (error) {
+//             // Optionally log other types of errors
+//             console.error('Error fetching session cookie:', error);
+//         }
+//     };
 
+//     fetchSessionCookie();
+// }, []);
+// console.log("DataOPen", dataOpen)
 
   useEffect(() => {
     const handlePopState = () => {
@@ -131,30 +143,22 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${scrolled ? "scrolled" : "static"}`}>
       <div className="navbar-container">
         <div className="navbar-log">
           <Link href="/">
-            <Image src={trafyIcon} className="trafy-icon" />
             <Image src={whiteLogo} alt="trafy logo" className="trafy-logo" />
           </Link>
         </div>
 
         <div className="menu-lg">
-          <div className="menu-left">
+        <div className="menu-left">
             <Link
-              href="https://trafy.ai/courses/"
+              href="/courses"
               className="menu-pathway"
-              onClick={() => handleNavigation("https://trafy.ai/courses/")}
+              onClick={() => handleNavigation("/courses")}
             >
               Pathway
-            </Link>
-            <Link
-              href="/"
-              className="menu-pathway"
-              onClick={() => handleNavigation("/")}
-            >
-              Masterclass
             </Link>
             <Link
               href="https://blog.trafy.ai"
@@ -162,6 +166,13 @@ const Header = () => {
               onClick={() => handleNavigation("https://blog.trafy.ai")}
             >
               Resources
+            </Link>
+            <Link
+              href="/"
+              className="menu-pathway"
+              onClick={() => handleNavigation("/")}
+            >
+              Mentor
             </Link>
           </div>
           <div className="menu-right-d">
@@ -189,7 +200,7 @@ const Header = () => {
                         />
                       </div>
                 </div>
-
+{/* 
                 {hover && (
                   <div className="menu-user-dropdown">
                     <Link
@@ -206,30 +217,30 @@ const Header = () => {
                     </Link>
                     <p onClick={handleLogOut}>Logout</p>
                   </div>
-                )}
+                )} */}
               </div>
             )}
           </div>
         </div>
 
         <div className="menu-mobile">
-          <Link
+          {/* <Link
             href="https://trafy.ai/courses/"
             className="menu-pathway"
             onClick={() => handleNavigation("https://trafy.ai/courses")}
             style={{ paddingRight: "16px" }}
           >
             Pathway
-          </Link>
+          </Link> */}
           <Image
             src={blackHamburger}
-            alt=""
+            alt="menu"
             className={`hamburger ${menuOpen ? "hide" : ""}`}
             onClick={toggleMenu}
           />
           <Image
             src={close1}
-            alt=""
+            alt="close"
             className={`exit-icon ${menuOpen ? "show" : ""}`}
             onClick={toggleMenu}
           />
@@ -237,12 +248,13 @@ const Header = () => {
           {menuOpen && (
             <div className="menu-mobile-contents" ref={menuRef}>
               <div className="menu-top-contents">
-                <Link
-                  href="/"
+                  <Link
+                  href="https://trafy.ai/courses/"
                   className="menu-pathway"
-                  onClick={() => handleNavigation("/")}
+                  onClick={() => handleNavigation("https://trafy.ai/courses")}
+                  style={{ paddingRight: "16px" }}
                 >
-                  Masterclass
+                  Pathway
                 </Link>
                 <Link
                   href="https://blog.trafy.ai"
@@ -250,6 +262,13 @@ const Header = () => {
                   onClick={() => handleNavigation("https://blog.trafy.ai")}
                 >
                   Resources
+                </Link>
+                <Link
+                  href="/"
+                  className="menu-pathway"
+                  onClick={() => handleNavigation("/")}
+                >
+                  Mentor
                 </Link>
                 {dataOpen && (
                   <hr
@@ -344,3 +363,4 @@ const Header = () => {
 };
 
 export default Header;
+

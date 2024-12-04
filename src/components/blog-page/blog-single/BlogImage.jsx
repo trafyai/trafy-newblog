@@ -41,12 +41,12 @@ const BlogImage = (props) => {
   return (
     <div> 
         <section className="blog-page-blog-image">
-            <Image className="blog-page-img" src={props.image}/>
+            <Image className="blog-page-img" src={props.image} alt='blog-image'/>
             <div className="blog-page-article-socials">
                 Share:
-                <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
-                <Image src={Facebook} alt="" onClick={shareToFacebook} className="blog-social-b" width="28" height="28" />
-                <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" />
+                <Image src={Linkedin} alt="Linkedin" onClick={shareToLinkedIn} className="blog-social-b" width="28" height="28" />
+                <Image src={Facebook} alt="Facebook" onClick={shareToFacebook} className="blog-social-b" width="28" height="28" />
+                <Image src={Twitter} alt="X" onClick={shareToTwitter} className="blog-social-b" width="28" height="28" />
             </div>
         </section>
   </div>
