@@ -23,6 +23,7 @@
 .navbar.static {
   background-color: transparent; 
   box-shadow: none;
+  height: 56px;
 }
 
 .navbar.scrolled {
@@ -138,7 +139,7 @@
 .menu-account-security,
 .menu-account-notification,
 .menu-account-logout {
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--p-font);
   font-weight: 400;
   color: var(--h-black)

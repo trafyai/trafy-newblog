@@ -95,7 +95,7 @@
 
 'use client'
 import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs,query, orderBy } from "firebase/firestore";
 import db from "@firebase"; // Assuming you have this Firebase configuration file
 import '@styles/blog/BlogLanding.css';
 import Link from "next/link";
@@ -110,12 +110,17 @@ export default function BlogLanding() {
         // Fetch blogs from Firestore
         const fetchBlogs = async () => {
             try {
+                // Fetch blogs ordered by 'Date' in descending order
                 const blogsCollection = collection(db, "blogs");
-                const blogsSnapshot = await getDocs(blogsCollection);
-                const blogsList = blogsSnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
+                const blogsQuery = query(blogsCollection, orderBy("Date", "desc")); 
+                const blogsSnapshot = await getDocs(blogsQuery);
+        
+                // Map the data into a usable array
+                const blogsList = blogsSnapshot.docs.map((doc) => ({
+                  id: doc.id,
+                  ...doc.data(),
                 }));
+        
                 setBlogs(blogsList);
             } catch (err) {
                 console.error("Error fetching blogs:", err);
