@@ -39,7 +39,7 @@ const BlogNewsletter = () => {
         setErrorMessage("Error submitting the form. Please try again later.");
       }
 
-      const emailRes = await fetch('http://localhost:5002/newsletter/submit', {
+      const emailRes = await fetch('https://trafyblog-backend-255821839155.us-central1.run.app/api/blogs/newslettersubscribe ', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })

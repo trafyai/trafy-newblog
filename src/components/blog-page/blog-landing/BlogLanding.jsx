@@ -120,8 +120,9 @@ export default function BlogLanding() {
                   id: doc.id,
                   ...doc.data(),
                 }));
-        
                 setBlogs(blogsList);
+                console.log("Fetched blogs:", blogsList);
+
             } catch (err) {
                 console.error("Error fetching blogs:", err);
                 setError("Failed to load blogs. Please try again.");
@@ -187,7 +188,7 @@ export default function BlogLanding() {
                                 </div>
                             ))
                         ) : (
-                            blogs.slice(1, 5).map((item) => (
+                            blogs.slice(1, 6).map((item) => (
                                 <div className="blog-landing-card" key={item.id}>
                                     <Link href={`/${item.id}`} className="blog-landing-card-inner">
                                         <div className="blog-landing-card-image">
