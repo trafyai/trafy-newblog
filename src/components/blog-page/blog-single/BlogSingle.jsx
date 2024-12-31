@@ -207,7 +207,7 @@ export default function BlogPage(props) {
               <BlogHero {...props} />
               {/* <BlogImage {...props} /> */}
               <BlogIntroduction {...props} />
-              <section className="blog-page-article-section">
+              {/* <section className="blog-page-article-section">
                 {props.mainArticle && props.mainArticle.map((article, mainIndex) => (
                   <div
                     className="blog-page-article-main-contents"
@@ -218,6 +218,55 @@ export default function BlogPage(props) {
                     {article.description && article.description.map((desc, descIndex) => (
                       <p key={descIndex}>{desc}</p>
                     ))}
+
+
+                    <ul>
+                    {article.points && article.points.map((point,pointIndex) => ( 
+                      <li key={pointIndex}>{point}</li>
+                    ))}
+                    </ul>
+
+                    {article.description2 && article.description2.map((desc, descIndex) => (
+                      <p key={descIndex}>{desc}</p>
+                    ))}
+                    
+                    {article.subArticle && article.subArticle.map((subarticle, subIndex) => (
+                      <div
+                        className="blog-page-subarticle"
+                        key={subIndex}
+                        ref={(el) => (subArticleRefs.current[`${mainIndex}-${subIndex}`] = el)} // Set subarticle ref
+                      >
+                        <h2>{subarticle.heading}</h2>
+                        {subarticle.description && subarticle.description.map((subDesc, descIndex) => (
+                          <p key={descIndex}>{subDesc}</p>
+                        ))}
+
+                        <ul>
+                        {subarticle.points && subarticle.points.map((point,pointIndex) => ( 
+                          <li key={pointIndex}>{point}</li>
+                        ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </section> */}
+                            <section className="blog-page-article-section">
+                {props.mainArticle && props.mainArticle.map((article, mainIndex) => (
+                  <div
+                    className="blog-page-article-main-contents"
+                    key={mainIndex}
+                    ref={(el) => (articleRefs.current[mainIndex] = el)} // Set main article ref
+                  >
+                    <h1 id={mainIndex}>{article.heading}</h1>
+                    {article.description && Array.isArray(article.description) ? (
+                      article.description.map((desc, descIndex) => (
+                        <p key={descIndex}>{desc}</p>
+                      ))
+                    ) : (
+                      <p>{article.description}</p>
+                    )}
+
                     <ul>
                     {article.points && article.points.map((point,pointIndex) => ( 
                       <li key={pointIndex}>{point}</li>
@@ -233,9 +282,14 @@ export default function BlogPage(props) {
                         ref={(el) => (subArticleRefs.current[`${mainIndex}-${subIndex}`] = el)} // Set subarticle ref
                       >
                         <h2>{subarticle.heading}</h2>
-                        {subarticle.description && subarticle.description.map((subDesc, descIndex) => (
-                          <p key={descIndex}>{subDesc}</p>
-                        ))}
+                        {subarticle.description && Array.isArray(subarticle.description) ? (
+                          subarticle.description.map((subDesc, descIndex) => (
+                            <p key={descIndex}>{subDesc}</p>
+                          ))
+                        ) : (
+                          <p>{subarticle.description}</p>
+                        )}
+
                         <ul>
                         {subarticle.points && subarticle.points.map((point,pointIndex) => ( 
                           <li key={pointIndex}>{point}</li>

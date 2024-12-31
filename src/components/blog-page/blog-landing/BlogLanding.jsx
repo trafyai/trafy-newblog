@@ -114,7 +114,7 @@ export default function BlogLanding() {
                 const blogsCollection = collection(db, "blogs");
                 const blogsQuery = query(blogsCollection, orderBy("Date", "desc")); 
                 const blogsSnapshot = await getDocs(blogsQuery);
-        
+
                 // Map the data into a usable array
                 const blogsList = blogsSnapshot.docs.map((doc) => ({
                   id: doc.id,
@@ -188,7 +188,7 @@ export default function BlogLanding() {
                                 </div>
                             ))
                         ) : (
-                            blogs.slice(1, 6).map((item) => (
+                            blogs.slice(1, 7).map((item) => (
                                 <div className="blog-landing-card" key={item.id}>
                                     <Link href={`/${item.id}`} className="blog-landing-card-inner">
                                         <div className="blog-landing-card-image">

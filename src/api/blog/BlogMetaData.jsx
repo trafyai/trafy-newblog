@@ -35,6 +35,13 @@ const BlogMetaData = [
         title: "Email Marketing: Why It Remains a Powerful Tool",
         metaDescription:"Email marketing is still a key component of online marketing plans for companies of all sizes. This blog discusses the basics of email marketing and explains why it's still a powerful tool in the current digital environment.",
      
+    },
+
+    {
+        id: "everything-you-have-to-know-about-ai-agents",
+        metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/_Blog%207.png?alt=media&token=1f28162e-def3-4d5d-bba6-2497b1d02ac8",
+        title: "Everything you have to know about AI Agents",
+        metaDescription:"Artificial Intelligience (AI) has become an part of day of day to life and it making it much easier. We have started using AI applications in our life for work, learning, and social interaction. We are someway are other contributing in making AI applications smarter.",
     }
 ]
 
