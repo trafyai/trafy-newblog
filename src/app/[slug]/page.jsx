@@ -74,12 +74,12 @@ export async function generateMetadata({params}) {
   return {
     title: product.title,
     description: product.metaDescription,
-    metadataBase: `https://blog.trafyai.com/${product.id}`,
+    metadataBase: `https://blog.trafy.ai/${product.id}`,
     type: 'article',
     openGraph: {
       title: product.title, 
       description: product.metaDescription,
-      url: `https://blog.trafyai.com/${product.id}`,
+      url: `https://blog.trafy.ai/${product.id}`,
       images: [
         {
           url: product.metaImage,
@@ -93,7 +93,7 @@ export async function generateMetadata({params}) {
       card: 'summary_large_image',
       title: product.title,
       description: product.metaDescription,
-      url: `https://blog.trafyai.com/${product.id}`,
+      url: `https://blog.trafy.ai/${product.id}`,
       image: product.metaImage, 
     },
   };

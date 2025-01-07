@@ -12,7 +12,7 @@ export const metadata = {
   title: "trafy blog | Latest on AI, Design, Marketing and Sales",
   description:
     "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
-  metadataBase: new URL("https://blog.trafyai.com/"),
+  metadataBase: new URL("https://blog.trafy.ai/"),
   openGraph: {
     title: "trafy - Your Personalised AI mentor",
     description:
