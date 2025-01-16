@@ -1,6 +1,9 @@
 import React from 'react'
 import RefundPolicy from '@components/footer/compliance/RefundPolicy';
 import Head from 'next/head';
+export const metadata = {
+  robots: "noindex, nofollow",
+};
 const page = () => {
   return (
     <div>
